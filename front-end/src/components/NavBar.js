@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import CssBaseline from '@mui/material/CssBaseline';
 
 import { Link } from "react-router-dom";
 
@@ -62,7 +63,8 @@ function NavBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
+      <CssBaseline />
+      <AppBar component="nav" position="sticky">
         <Toolbar>
           <IconButton
             color="inherit"

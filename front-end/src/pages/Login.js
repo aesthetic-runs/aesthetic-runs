@@ -3,7 +3,6 @@ import React from "react";
 function Login() {
   return (
     <div className="Login">
-      <h1>Temp Buffer</h1>
       <h1>Login</h1>
     </div>
   );
