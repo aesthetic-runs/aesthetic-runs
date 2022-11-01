@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
-import Home from './pages/Home';
-import Layout from './pages/Layout';
-import Login from './pages/Login';
-import Map from './pages/Map';
-import Registration from './pages/Registration';
-import NoPage from './pages/NoPage';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import Login from "./pages/Login";
+import Map from "./pages/Map";
+import Registration from "./pages/Registration";
+import NoPage from "./pages/NoPage";
+import reportWebVitals from "./reportWebVitals";
 
 export default function App() {
   return (

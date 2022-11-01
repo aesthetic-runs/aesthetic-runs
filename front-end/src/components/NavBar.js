@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import { Link } from "react-router-dom";
 
@@ -48,11 +49,6 @@ function NavBar(props) {
             <ListItemText>Login</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/Registration">
-            <ListItemText>Registration</ListItemText>
-          </ListItemButton>
-        </ListItem>
       </List>
     </Box>
   );
@@ -62,7 +58,8 @@ function NavBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
+      <CssBaseline />
+      <AppBar component="nav" position="sticky">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -89,9 +86,6 @@ function NavBar(props) {
             </Button>
             <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
               Login
-            </Button>
-            <Button component={Link} to="/Registration" sx={{ color: "#fff" }}>
-              Registration
             </Button>
           </Box>
         </Toolbar>
