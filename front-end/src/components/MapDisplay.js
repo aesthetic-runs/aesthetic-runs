@@ -21,8 +21,10 @@ const MapDisplay = () => {
     navigator.geolocation.getCurrentPosition(success);
   });
 
+  const apiKey = process.env.REACT_APP_GOOGLE_MAPS;
+
   return (
-    <LoadScript googleMapsApiKey="***REMOVED***">
+    <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={13}
