@@ -1,26 +1,37 @@
-// import React from "react";
-// import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import React, { useState, useEffect } from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
-// const MapDisplay = () => {
-//   const mapStyles = {
-//     height: "100vh",
-//     width: "100%",
-//   };
+const MapDisplay = () => {
+  const mapStyles = {
+    height: "95vh",
+    width: "100%",
+  };
 
-//   const defaultCenter = {
-//     lat: 41.3851,
-//     lng: 2.1734,
-//   };
+  const [currentPosition, setCurrentPosition] = useState({});
 
-//   return (
-//     <LoadScript googleMapsApiKey="YOUR_API_KEY_HERE">
-//       <GoogleMap
-//         mapContainerStyle={mapStyles}
-//         zoom={13}
-//         center={defaultCenter}
-//       />
-//     </LoadScript>
-//   );
-// };
+  const success = (position) => {
+    const currentPosition = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+    };
+    setCurrentPosition(currentPosition);
+  };
 
-// export default MapDisplay;
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(success);
+  });
+
+  return (
+    <LoadScript googleMapsApiKey="AIzaSyD2ZqM9SXOQXWChW4D6Mb_wd9fvSpgvsSM">
+      <GoogleMap
+        mapContainerStyle={mapStyles}
+        zoom={13}
+        center={currentPosition}
+      >
+        {currentPosition.lat && <Marker position={currentPosition} />}
+      </GoogleMap>
+    </LoadScript>
+  );
+};
+
+export default MapDisplay;
