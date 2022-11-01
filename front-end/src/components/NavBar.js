@@ -49,11 +49,6 @@ function NavBar(props) {
             <ListItemText>Login</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/Registration">
-            <ListItemText>Registration</ListItemText>
-          </ListItemButton>
-        </ListItem>
       </List>
     </Box>
   );
@@ -91,9 +86,6 @@ function NavBar(props) {
             </Button>
             <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
               Login
-            </Button>
-            <Button component={Link} to="/Registration" sx={{ color: "#fff" }}>
-              Registration
             </Button>
           </Box>
         </Toolbar>
