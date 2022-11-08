@@ -66,21 +66,21 @@ const MapDisplay = () => {
           <div className="map-settings">
             <hr className="mt-0 mb-3" />
 
-            {/* <div className="row">
+            <div className="row">
               <div className="col-md-6 col-lg-4">
                 <div className="form-group">
                   <label htmlFor="ORIGIN">Origin</label>
                   <br />
-                  <input
+                  {/* <input
                     id="ORIGIN"
                     className="form-control"
                     type="text"
                     ref={this.getOrigin}
-                  />
+                  /> */}
                 </div>
               </div>
 
-              <div className="col-md-6 col-lg-4">
+              {/* <div className="col-md-6 col-lg-4">
                 <div className="form-group">
                   <label htmlFor="DESTINATION">Destination</label>
                   <br />
@@ -91,8 +91,8 @@ const MapDisplay = () => {
                     ref={this.getDestination}
                   />
                 </div>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
 
             {/* <div className="form-group custom-control custom-radio mr-4">
               <input
