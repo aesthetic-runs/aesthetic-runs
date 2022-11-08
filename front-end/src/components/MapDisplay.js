@@ -61,11 +61,11 @@ const MapDisplay = () => {
         {currentPosition.lat && <Marker position={currentPosition} />}
 
      {/* This is a WIP */}
-        {/* <div className="map">
+        <div className="map">
           <div className="map-settings">
             <hr className="mt-0 mb-3" />
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col-md-6 col-lg-4">
                 <div className="form-group">
                   <label htmlFor="ORIGIN">Origin</label>
@@ -91,9 +91,9 @@ const MapDisplay = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="form-group custom-control custom-radio mr-4">
+            {/* <div className="form-group custom-control custom-radio mr-4">
               <input
                 id="WALKING"
                 className="custom-control-input"
@@ -105,9 +105,9 @@ const MapDisplay = () => {
               <label className="custom-control-label" htmlFor="WALKING">
                 Walking
               </label>
-            </div>
+            </div> */}
           </div>
-        </div> */}
+        </div>
       </GoogleMap>
     </LoadScript>
   );
