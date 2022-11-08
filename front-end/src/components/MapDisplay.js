@@ -23,6 +23,7 @@ const MapDisplay = () => {
 
   const apiKey = process.env.REACT_APP_GOOGLE_MAPS;
 
+  //travel mode: Walking mode used
   function checkWalking({ target: { checked } }) {
     checked &&
       this.setState(() => ({
@@ -60,7 +61,7 @@ const MapDisplay = () => {
       >
         {currentPosition.lat && <Marker position={currentPosition} />}
 
-     {/* This is a WIP */}
+     {/* This is a WIP - checking that origin/destination sections work with Google Maps */}
         <div className="map">
           <div className="map-settings">
             <hr className="mt-0 mb-3" />
