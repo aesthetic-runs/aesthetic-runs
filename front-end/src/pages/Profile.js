@@ -62,7 +62,7 @@ export default function Home() {
               color="text.secondary"
               paragraph
             >
-              Have your runs be a little more pleasing to the eye.
+              Description of person
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -70,13 +70,13 @@ export default function Home() {
               spacing={2}
               justifyContent="center"
             >
-              {/* <Button variant="contained">Sign up!</Button> */}
+              {/* <Button variant="contained">Total Stats!</Button> */}
               <Button
                 component={RouterLink}
                 to="/Registration"
                 variant="contained"
               >
-                Sign up!
+                Total Stats!
               </Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
             </Stack>
@@ -101,7 +101,7 @@ export default function Home() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Greenwich Village
+                      Empire State Building
                     </Typography>
                     <Typography>
                       {/* This is a media card. You can use this section to describe
