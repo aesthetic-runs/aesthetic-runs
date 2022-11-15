@@ -47,7 +47,20 @@ export default function Home() {
           }}
         >
           <Container maxWidth="sm">
-            <Typography
+          <Card
+            sx={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+            >
+            <CardMedia
+              component="img"
+              image="https://cdn-icons-png.flaticon.com/512/3135/3135823.png"
+              alt="random"
+            />
+          </Card> 
+          <Typography
               component="h1"
               variant="h2"
               align="center"
@@ -73,7 +86,7 @@ export default function Home() {
               {/* <Button variant="contained">Total Stats!</Button> */}
               <Button
                 component={RouterLink}
-                to="/Registration"
+                to="/Profile"
                 variant="contained"
               >
                 Total Stats!
@@ -96,7 +109,7 @@ export default function Home() {
                 >
                   <CardMedia
                     component="img"
-                    image="https://i.imgur.com/wHgMbjc.jpg"
+                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
