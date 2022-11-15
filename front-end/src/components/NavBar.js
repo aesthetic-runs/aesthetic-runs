@@ -87,6 +87,9 @@ function NavBar(props) {
             <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
               Login
             </Button>
+            <Button component={Link} to="/Profile" sx={{ color: "#fff" }}>
+              Profile
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
