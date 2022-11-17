@@ -90,6 +90,9 @@ function NavBar(props) {
             <Button component={Link} to="/Profile" sx={{ color: "#fff" }}>
               Profile
             </Button>
+            <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
+              Quick Runs
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
