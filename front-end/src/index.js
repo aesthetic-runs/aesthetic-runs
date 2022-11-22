@@ -7,6 +7,7 @@ import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Map from "./pages/Map";
 import Profile from "./pages/Profile";
+import QuickRuns from "./pages/QuickRuns";
 import Registration from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import NoPage from "./pages/NoPage";
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="map" element={<Map />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="quickruns" element={<QuickRuns />} />
           <Route path="registration" element={<Registration />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="landmarks" element={<Landmarks />} />
