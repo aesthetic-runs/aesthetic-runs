@@ -91,7 +91,7 @@ function NavBar(props) {
               Profile
             </Button>
             <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
-              Quick Runs
+              QuickRuns
             </Button>
           </Box>
         </Toolbar>

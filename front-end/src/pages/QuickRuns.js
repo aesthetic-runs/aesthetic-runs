@@ -67,7 +67,7 @@ export default function Home() {
               color="text.primary"
               gutterBottom
             >
-              Quick Runs
+              QuickRuns
             </Typography>
             <Typography
               variant="h5"
