@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Map from "./pages/Map";
 import Profile from "./pages/Profile";
 import QuickRuns from "./pages/QuickRuns";
+import QuickRunsRoutes from "./pages/QuickRunsRoutes";
 import Registration from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import NoPage from "./pages/NoPage";
