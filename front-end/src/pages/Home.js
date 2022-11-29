@@ -65,6 +65,21 @@ export default function Home() {
               Have your runs be a little more pleasing to the eye.
             </Typography>
             <Stack
+              sx={{ pt: 2 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+            </Stack>
+            <Typography
+              variant="h8"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
+              Aesthetic Runs aims to tailor personal goals and promote good health and wellbeing while admiring bucket list landmarks and what nature has to offer.
+            </Typography>
+            <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
@@ -80,9 +95,26 @@ export default function Home() {
               </Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
             </Stack>
+
+            <Stack
+              sx={{ pt: 2 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+            </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+
+        <Container sx={{ py: 4 }} maxWidth="md">
+          <Typography
+            variant="h5"
+            align="center"
+            color="text.secondary"
+            paragraph
+          >
+            Check out some popular runs!
+          </Typography>
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
@@ -103,6 +135,13 @@ export default function Home() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Greenwich Village
                     </Typography>
+                    <Button
+                      component={RouterLink}
+                      to="/QuickRunsRoutes"
+                      variant="contained"
+                      >
+                      Run the route!
+                    </Button>
                     <Typography>
                       {/* This is a media card. You can use this section to describe
                       the content. */}
@@ -117,6 +156,13 @@ export default function Home() {
             ))}
           </Grid>
         </Container>
+        <Card>
+          <CardMedia
+            component="img"
+            image = "https://png.pngtree.com/background/20210711/original/pngtree-colorful-people-silhouette-running-flying-corporate-culture-poster-background-picture-image_1065029.jpg"
+            alt="random"
+          />
+        </Card>
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
