@@ -86,7 +86,7 @@ export default function Home() {
               {/* <Button variant="contained">Total Stats!</Button> */}
               <Button
                 component={RouterLink}
-                to="/Profile"
+                to="/QuickRuns"
                 variant="contained"
               >
                 1 mile
@@ -130,6 +130,13 @@ export default function Home() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Empire State Building
                     </Typography>
+                    <Button
+                      component={RouterLink}
+                      to="/QuickRunsRoutes"
+                      variant="contained"
+                      >
+                      Run the route!
+                    </Button>
                     <Typography>
                       {/* This is a media card. You can use this section to describe
                       the content. */}
