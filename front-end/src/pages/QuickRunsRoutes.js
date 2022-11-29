@@ -17,14 +17,17 @@ class GoogleMaps extends Component {
       const directionsService = new window.google.maps.DirectionsService();
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      const origin = { lat: 40.756795, lng: -73.954298 };
-      const destination = { lat: 41.756795, lng: -78.954298 };
+      //origin is set to eataly NYC flatiron location (200 5th Avenue)
+      const origin = { lat: 40.742213, lng: -73.98958 };
+
+      //destination is set to empire state building
+      const destination = { lat: 40.748817, lng: 73.9857 };
 
       directionsService.route(
         {
           origin: origin,
           destination: destination,
-          travelMode: window.google.maps.TravelMode.DRIVING
+          travelMode: window.google.maps.TravelMode.WALKING
         },
         (result, status) => {
           if (status === window.google.maps.DirectionsStatus.OK) {
@@ -46,7 +49,7 @@ class GoogleMaps extends Component {
               //key: "YOUR_API_KEY"
               key: "process.env.REACT_APP_GOOGLE_MAPS"
             }}
-            defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
+            defaultCenter={{ lat: 40.742213, lng: -73.98958 }}
             defaultZoom={10}
             center={this.state.currentLocation}
             yesIWantToUseGoogleMapApiInternals
