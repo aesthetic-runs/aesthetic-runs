@@ -25,7 +25,7 @@ export default function App() {
           <Route path="map" element={<Map />} />
           <Route path="profile" element={<Profile />} />
           <Route path="quickruns" element={<QuickRuns />} />
-          <Route path="Run the Route!" element={<QuickRunsRoutes />} />
+          <Route path="quickrunsroutes" element={<QuickRunsRoutes />} />
           <Route path="registration" element={<Registration />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="landmarks" element={<Landmarks />} />
