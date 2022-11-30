@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
 import axios from "axios";
 
 const MapDisplay = () => {
@@ -28,33 +28,33 @@ const MapDisplay = () => {
   const apiKey = process.env.REACT_APP_GOOGLE_MAPS;
 
   //travel mode: Walking mode used
-  function checkWalking({ target: { checked } }) {
-    checked &&
-      this.setState(() => ({
-        travelMode: "WALKING",
-      }));
-  }
+  // function checkWalking({ target: { checked } }) {
+  //   checked &&
+  //     this.setState(() => ({
+  //       travelMode: "WALKING",
+  //     }));
+  // }
 
-  function getOrigin(ref) {
-    this.origin = ref;
-  }
+  // function getOrigin(ref) {
+  //   this.origin = ref;
+  // }
 
-  function getDestination(ref) {
-    this.destination = ref;
-  }
+  // function getDestination(ref) {
+  //   this.destination = ref;
+  // }
 
-  function onClick() {
-    if (this.origin.value !== "" && this.destination.value !== "") {
-      this.setState(() => ({
-        origin: this.origin.value,
-        destination: this.destination.value,
-      }));
-    }
-  }
+  // function onClick() {
+  //   if (this.origin.value !== "" && this.destination.value !== "") {
+  //     this.setState(() => ({
+  //       origin: this.origin.value,
+  //       destination: this.destination.value,
+  //     }));
+  //   }
+  // }
 
-  function onMapClick(...args) {
-    console.log("onClick args: ", args);
-  }
+  // function onMapClick(...args) {
+  //   console.log("onClick args: ", args);
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
