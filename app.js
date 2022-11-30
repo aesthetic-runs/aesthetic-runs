@@ -24,11 +24,13 @@ app.use((request, response, next) => {
   next();
 });
 
+// Landing page for back-end
 app.get("/", (request, response, next) => {
   response.json({ message: "Hey! This is your server response!" });
   next();
 });
 
+// registration endpoint
 app.post("/registration", (request, response) => {
   // hash the password
   bcrypt
@@ -88,7 +90,7 @@ app.post("/login", (request, response) => {
             });
           }
 
-          //   create JWT token
+          // create JWT token
           const token = jwt.sign(
             {
               userId: user._id,
@@ -98,7 +100,7 @@ app.post("/login", (request, response) => {
             { expiresIn: "24h" }
           );
 
-          //   return success response
+          // return success response
           response.status(200).send({
             message: "Login successful!",
             email: user.email,
