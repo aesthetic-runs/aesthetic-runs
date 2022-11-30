@@ -46,7 +46,7 @@ app.post("/registration", (request, response) => {
         // return success if the new user is added to the database successfully
         .then((result) => {
           response.status(201).send({
-            message: "User Created Successfully",
+            message: "User created successfully",
             result,
           });
         })
@@ -83,7 +83,7 @@ app.post("/login", (request, response) => {
           // check if password matches
           if (!passwordCheck) {
             return response.status(400).send({
-              message: "Passwords does not match",
+              message: "Incorrect password, please try again.",
               error,
             });
           }
@@ -100,7 +100,7 @@ app.post("/login", (request, response) => {
 
           //   return success response
           response.status(200).send({
-            message: "Login Successful",
+            message: "Login successful!",
             email: user.email,
             token,
           });
@@ -108,7 +108,7 @@ app.post("/login", (request, response) => {
         // catch error if password does not match
         .catch((error) => {
           response.status(400).send({
-            message: "Passwords does not match",
+            message: "Incorrect password, please try again.",
             error,
           });
         });
@@ -116,7 +116,7 @@ app.post("/login", (request, response) => {
     // catch error if email does not exist
     .catch((e) => {
       response.status(404).send({
-        message: "Email not found",
+        message: "Email not found, please try again.",
         e,
       });
     });
@@ -126,12 +126,12 @@ app.post("/login", (request, response) => {
 
 // free endpoint
 app.get("/free-endpoint", (request, response) => {
-  response.json({ message: "You are free to access me anytime" });
+  response.json({ message: "You are free to access me anytime." });
 });
 
 // authentication endpoint
 app.get("/auth-endpoint", auth, (request, response) => {
-  response.json({ message: "You are authorized to access me" });
+  response.json({ message: "You are authorized to access me." });
 });
 
 // module.exports = app;

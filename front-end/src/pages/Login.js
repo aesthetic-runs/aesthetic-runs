@@ -1,10 +1,12 @@
 import * as React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -37,13 +39,46 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState("");
+  // const [register, setRegister] = useState(false);
+  const navigate = useNavigate();
+
+  const handleEmail = (e) => {
+    const email_in = e.target.value;
+    setEmail(email_in);
+  };
+
+  const handlePass = (e) => {
+    const pass_in = e.target.value;
+    setPassword(pass_in);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
+    // set configurations
+    const configuration = {
+      method: "post",
+      url: "https://aesthetic-backend.onrender.com/login",
+      data: {
+        email: email,
+        password: password,
+      },
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+
+    axios(configuration)
+      .then((result) => {
+        alert("Success! You are now logged in.");
+        navigate("/QuickRuns");
+      })
+      .catch((error) => {
+        let error_message = error.response.data.message;
+        alert(error_message);
+      });
   };
 
   return (
@@ -79,6 +114,7 @@ export default function Login() {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={handleEmail}
             />
             <TextField
               margin="normal"
@@ -89,10 +125,7 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              onChange={handlePass}
             />
             <Button
               type="submit"
