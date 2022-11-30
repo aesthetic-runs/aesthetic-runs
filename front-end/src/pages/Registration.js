@@ -39,33 +39,35 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState("");
   const [register, setRegister] = useState(false);
 
+  const handleEmail = (e) => {
+    const email_in = e.target.value;
+    setEmail(email_in);
+  };
+
+  const handlePass = (e) => {
+    const pass_in = e.target.value;
+    setPassword(pass_in);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-
-    setEmail(data.get("email"));
-    setPassword(data.get("password"));
-
-    // console.log({
-    //   email: data.get("email"),
-    //   password: data.get("password"),
-    // });
 
     // set configurations
     const configuration = {
       method: "post",
       url: "https://aesthetic-backend.onrender.com/registration",
+      // url: "http://localhost:8000/registration",
       data: {
         email: email,
         password: password,
       },
       headers: {
-        'content-type': 'application/json'
-      }
+        "content-type": "application/json",
+      },
     };
 
     axios(configuration)
@@ -102,27 +104,6 @@ export default function SignUp() {
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
-              {/* <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid> */}
               <Grid item xs={12}>
                 <TextField
                   required
@@ -131,6 +112,7 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  onChange={handleEmail}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -142,14 +124,9 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  onChange={handlePass}
                 />
               </Grid>
-              {/* <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid> */}
             </Grid>
             <Button
               type="submit"

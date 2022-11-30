@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-var cors = require("cors");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -13,20 +12,17 @@ const auth = require("./auth");
 // execute database connection
 dbConnect();
 
-// Curb Cors Error
-app.use(cors());
-
-// Fix CORS
-app.use((request, response, next) => {
-  response.append('Access-Control-Allow-Origin', '*');
-  response.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  response.append('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
-
 // body parser configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Fix CORS
+app.use((request, response, next) => {
+  response.append("Access-Control-Allow-Origin", "*");
+  response.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  response.append("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 app.get("/", (request, response, next) => {
   response.json({ message: "Hey! This is your server response!" });
@@ -34,8 +30,6 @@ app.get("/", (request, response, next) => {
 });
 
 app.post("/registration", (request, response) => {
-  // response.set('Access-Control-Allow-Origin', '*');
-
   // hash the password
   bcrypt
     .hash(request.body.password, 10)
@@ -75,8 +69,6 @@ app.post("/registration", (request, response) => {
 
 // login endpoint
 app.post("/login", (request, response) => {
-  // response.set('Access-Control-Allow-Origin', '*');
-
   // check if email exists
   User.findOne({ email: request.body.email })
 
