@@ -16,6 +16,14 @@ dbConnect();
 // Curb Cors Error
 app.use(cors());
 
+// Fix CORS
+app.use((request, response, next) => {
+  response.append('Access-Control-Allow-Origin', ['*']);
+  response.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  response.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 // body parser configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,7 +34,7 @@ app.get("/", (request, response, next) => {
 });
 
 app.post("/registration", (request, response) => {
-  response.set('Access-Control-Allow-Origin', '*');
+  // response.set('Access-Control-Allow-Origin', '*');
 
   // hash the password
   bcrypt
@@ -67,7 +75,7 @@ app.post("/registration", (request, response) => {
 
 // login endpoint
 app.post("/login", (request, response) => {
-  response.set('Access-Control-Allow-Origin', '*');
+  // response.set('Access-Control-Allow-Origin', '*');
 
   // check if email exists
   User.findOne({ email: request.body.email })
