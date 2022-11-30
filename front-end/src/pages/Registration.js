@@ -58,7 +58,7 @@ export default function SignUp() {
     // set configurations
     const configuration = {
       method: "post",
-      url: "http://localhost:8000/api/registration",
+      url: "http://https://aesthetic-backend.onrender.com/registration",
       data: {
         email: email,
         password: password,

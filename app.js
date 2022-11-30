@@ -20,14 +20,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/api/", (request, response, next) => {
+app.get("/", (request, response, next) => {
   response.json({ message: "Hey! This is your server response!" });
   next();
 });
 
-app.post("/api/registration", (request, response) => {
+app.post("/registration", (request, response) => {
   response.set('Access-Control-Allow-Origin', '*');
-  
+
   // hash the password
   bcrypt
     .hash(request.body.password, 10)
@@ -66,7 +66,9 @@ app.post("/api/registration", (request, response) => {
 });
 
 // login endpoint
-app.post("/api/login", (request, response) => {
+app.post("/login", (request, response) => {
+  response.set('Access-Control-Allow-Origin', '*');
+
   // check if email exists
   User.findOne({ email: request.body.email })
 
@@ -123,12 +125,12 @@ app.post("/api/login", (request, response) => {
 // bcrypt.hash(request.body.password, 10).then().catch();
 
 // free endpoint
-app.get("/api/free-endpoint", (request, response) => {
+app.get("/free-endpoint", (request, response) => {
   response.json({ message: "You are free to access me anytime" });
 });
 
 // authentication endpoint
-app.get("/api/auth-endpoint", auth, (request, response) => {
+app.get("/auth-endpoint", auth, (request, response) => {
   response.json({ message: "You are authorized to access me" });
 });
 
