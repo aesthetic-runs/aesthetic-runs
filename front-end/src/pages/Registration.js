@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -14,6 +15,9 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
+import validator from "validator";
+
+const theme = createTheme();
 
 function Copyright(props) {
   return (
@@ -36,12 +40,31 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
+function isValidEmail(value) {
+  return /\S+@\S+\.\S+/.test(value);
+}
+
+const isValidPass = (value) => {
+  if (
+    validator.isStrongPassword(value, {
+      minLength: 8,
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1,
+    })
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 export default function SignUp() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState("");
-  const [register, setRegister] = useState(false);
+  // const [register, setRegister] = useState(false);
+  const navigate = useNavigate();
 
   const handleEmail = (e) => {
     const email_in = e.target.value;
@@ -56,27 +79,33 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // set configurations
-    const configuration = {
-      method: "post",
-      url: "https://aesthetic-backend.onrender.com/registration",
-      // url: "http://localhost:8000/registration",
-      data: {
-        email: email,
-        password: password,
-      },
-      headers: {
-        "content-type": "application/json",
-      },
-    };
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.")
+    } else if (!isValidPass(password)) {
+      alert("Password must have at least 1 uppercase letter, 1 number, and 1 symbol.")
+    } else {
+      // set configurations
+      const configuration = {
+        method: "post",
+        url: "https://aesthetic-backend.onrender.com/registration",
+        data: {
+          email: email,
+          password: password,
+        },
+        headers: {
+          "content-type": "application/json",
+        },
+      };
 
-    axios(configuration)
-      .then((result) => {
-        setRegister(true);
-      })
-      .catch((error) => {
-        error = new Error();
-      });
+      axios(configuration)
+        .then((result) => {
+          alert("Success! You can now log in.");
+          navigate("/Login");
+        })
+        .catch((error) => {
+          error = new Error();
+        });
+    }
   };
 
   return (
