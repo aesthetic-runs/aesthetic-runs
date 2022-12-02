@@ -19,7 +19,7 @@ class GoogleMaps extends Component {
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
       //origin is set to eataly NYC flatiron location (200 5th Avenue)
-      const origin = { lat: 40.742213, lng: -73.98958 };
+      const origin = { lat: 40.742213, lng: -73.989588 };
 
       //destination is set to empire state building
       // const destination = { lat: 41.756795, lng: -78.954298 };
@@ -42,7 +42,7 @@ class GoogleMaps extends Component {
     };
     return (
       <div>
-        <div style={{ height: "400px", width: "100%" }}>
+        <div style={{ height: "600px", width: "100%" }}>
         {/* <div className="Map">
           <MapDisplay />
         </div> */}
