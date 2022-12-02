@@ -8,7 +8,8 @@ class GoogleMaps extends Component {
     super(props);
 
     this.state = {
-      currentLocation: { lat: 40.756795, lng: -73.954298 }
+      currentLocation: { lat: 40.756795, lng: -73.954298 },
+      key: process.env.REACT_APP_GOOGLE_MAPS
     };
   }
 
@@ -21,7 +22,8 @@ class GoogleMaps extends Component {
       const origin = { lat: 40.742213, lng: -73.98958 };
 
       //destination is set to empire state building
-      const destination = { lat: 40.748817, lng: 73.9857 };
+      // const destination = { lat: 41.756795, lng: -78.954298 };
+      const destination = { lat: 40.748817, lng: -73.985428 };
 
       directionsService.route(
         {
@@ -47,9 +49,10 @@ class GoogleMaps extends Component {
           <GoogleMapReact
             bootstrapURLKeys={{
               //key: "YOUR_API_KEY"
-              key: "process.env.REACT_APP_GOOGLE_MAPS"
+              key: process.env.REACT_APP_GOOGLE_MAPS
+              // key: "AIzaSyDbkwPEnUrm0tS38IADZupex-I30a7txp4"
             }}
-            defaultCenter={{ lat: 40.742213, lng: -73.98958 }}
+            defaultCenter={{ lat: -3.745, lng: -38.523 }}
             defaultZoom={10}
             center={this.state.currentLocation}
             yesIWantToUseGoogleMapApiInternals
