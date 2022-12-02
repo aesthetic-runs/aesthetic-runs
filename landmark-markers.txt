@@ -1,2 +1,17 @@
 lat: 40.748817, lng: -73.985428 //empire state building
 lat: 40.742213, lng: -73.989588 //eataly NYC flatiron location (200 5th Avenue)
+lat: 40.741183, lng: -74.009100 //little island (pier55)
+lat: 40.735863, lng: -73.991083 //union square
+lat: 40.747993, lng: -74.004890 //the high line
+lat: 40.753826, lng: -74.002228 //the vessel
+lat: 40.742352, lng: -74.006210 //chelsea market
+lat: 40.730610, lng: -73.935242 //the edge
+lat: 40.711449, lng: -74.013855 //911 mem museum
+lat: 40.758896, lng: -73.985130 //times square
+lat: 40.703564, lng: -74.016678 //battery park
+lat: 40.758678, lng: -73.978798 //rockefeller center
+lat: 40.730824, lng: -73.997330 //washington square park
+lat: 40.768410, lng: -73.982018 //columbus circle
+lat: 40.706001, lng: -73.997002 //brooklyn bridge
+lat: 40.712742, lng: -74.013382 //one world observatory
+lat: 40.718922, lng: -73.974383 //john v. lindsay east rver park
