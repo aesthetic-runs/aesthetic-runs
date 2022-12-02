@@ -1,0 +1,2 @@
+lat: 40.748817, lng: -73.985428 //empire state building
+lat: 40.742213, lng: -73.989588 //eataly NYC flatiron location (200 5th Avenue)
