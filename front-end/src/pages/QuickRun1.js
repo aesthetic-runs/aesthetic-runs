@@ -6,7 +6,7 @@ class GoogleMaps extends Component {
 
     this.state = {
       currentLocation: { lat: 40.756795, lng: -73.954298 },
-      key: process.env.REACT_APP_GOOGLE_MAPS
+      key: process.env.REACT_APP_GOOGLE_MAPS,
     };
   }
 
@@ -33,7 +33,7 @@ class GoogleMaps extends Component {
         },
         {
           //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.746600, lng: -73.994193 },
+          location: { lat: 40.7466, lng: -73.994193 },
           stopover: true,
         },
       ];
@@ -60,16 +60,16 @@ class GoogleMaps extends Component {
 
     return (
       <div style={{ height: "93vh", width: "100%" }}>
-          <GoogleMapReact
-            bootstrapURLKeys={{
-              key: process.env.REACT_APP_GOOGLE_MAPS
-            }}
-            defaultCenter={{ lat: -3.745, lng: -38.523 }}
-            defaultZoom={10}
-            center={this.state.currentLocation}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
-          />
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: process.env.REACT_APP_GOOGLE_MAPS,
+          }}
+          defaultCenter={{ lat: -3.745, lng: -38.523 }}
+          defaultZoom={10}
+          center={this.state.currentLocation}
+          yesIWantToUseGoogleMapApiInternals
+          onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+        />
       </div>
     );
   }

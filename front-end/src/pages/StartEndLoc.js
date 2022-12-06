@@ -139,8 +139,7 @@ function initialize() {
 
     //get Altitude in meters
     getElevation(coordinates);
-    document.getElementById("coordinatesArray").value =
-      coordinates;
+    document.getElementById("coordinatesArray").value = coordinates;
     document.getElementById("coordPaceIdArray").value = placeIdArray;
   }
 

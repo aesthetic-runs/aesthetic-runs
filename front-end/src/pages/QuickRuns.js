@@ -45,20 +45,20 @@ export default function Home() {
           }}
         >
           <Container maxWidth="sm">
-          <Card
-            sx={{
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-            }}
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+              }}
             >
-            <CardMedia
-              component="img"
-              image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
-              alt="random"
-            />
-          </Card> 
-          <Typography
+              <CardMedia
+                component="img"
+                image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
+                alt="random"
+              />
+            </Card>
+            <Typography
               component="h1"
               variant="h2"
               align="center"
@@ -80,95 +80,95 @@ export default function Home() {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Empire State
-                    </Typography>
-                    <Button
-                      component={RouterLink}
-                      to="/QuickRun1"
-                      variant="contained"
-                      >
-                      Run the route!
-                    </Button>
-                    <Typography>
-                      {/* This is a media card. You can use this section to describe
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Empire State
+                  </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/QuickRun1"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
+                  <Typography>
+                    {/* This is a media card. You can use this section to describe
                       the content. */}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    {/* <Button size="small">View</Button>
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  {/* <Button size="small">View</Button>
                     <Button size="small">Edit</Button> */}
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Lincoln Center
-                    </Typography>
-                    <Button
-                      component={RouterLink}
-                      to="/QuickRun2"
-                      variant="contained"
-                      >
-                      Run the route!
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Statue of Liberty
-                    </Typography>
-                    <Button
-                      component={RouterLink}
-                      to="/QuickRun3"
-                      variant="contained"
-                      >
-                      Run the route!
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Grid>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Lincoln Center
+                  </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/QuickRun2"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Statue of Liberty
+                  </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/QuickRun3"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>
