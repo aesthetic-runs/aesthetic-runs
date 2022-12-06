@@ -5,7 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
+// import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
@@ -42,8 +42,8 @@ export default function Home() {
         <Box
           sx={{
             bgcolor: "background.paper",
-            pt: 8,
-            pb: 6,
+            pt: 5,
+            pb: 0,
           }}
         >
           <Container maxWidth="sm">
@@ -77,13 +77,13 @@ export default function Home() {
             >
               Select a pre-routed map route to start your run!
             </Typography>
-            <Stack
+            {/* <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
             >
-              {/* <Button variant="contained">Total Stats!</Button> */}
+              <Button variant="contained">Total Stats!</Button>
               <Button
                 component={RouterLink}
                 to="/QuickRuns"
@@ -105,8 +105,8 @@ export default function Home() {
               >
                 5 miles
               </Button>
-              {/* <Button variant="outlined">Secondary action</Button> */}
-            </Stack>
+              <Button variant="outlined">Secondary action</Button>
+            </Stack> */}
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
