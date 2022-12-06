@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+// import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
@@ -29,8 +29,6 @@ function Copyright() {
     </Typography>
   );
 }
-
-const cards = [1, 2, 3];
 
 const theme = createTheme();
 
@@ -69,15 +67,16 @@ export default function Home() {
               direction="row"
               spacing={2}
               justifyContent="center"
-            >
-            </Stack>
+            ></Stack>
             <Typography
               variant="h8"
               align="center"
               color="text.secondary"
               paragraph
             >
-              Aesthetic Runs aims to tailor personal goals and promote good health and wellbeing while admiring bucket list landmarks and what nature has to offer.
+              Aesthetic Runs aims to tailor personal goals and promote good
+              health and wellbeing while admiring bucket list landmarks and what
+              nature has to offer.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -101,8 +100,7 @@ export default function Home() {
               direction="row"
               spacing={2}
               justifyContent="center"
-            >
-            </Stack>
+            ></Stack>
           </Container>
         </Box>
 
@@ -117,52 +115,68 @@ export default function Home() {
           </Typography>
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="https://i.imgur.com/wHgMbjc.jpg"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Greenwich Village
-                    </Typography>
-                    <Button
-                      component={RouterLink}
-                      to="/QuickRunsRoutes"
-                      variant="contained"
-                      >
-                      Run the route!
-                    </Button>
-                    <Typography>
-                      {/* This is a media card. You can use this section to describe
-                      the content. */}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    {/* <Button size="small">View</Button>
-                    <Button size="small">Edit</Button> */}
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://i.imgur.com/wHgMbjc.jpg"
+                  alt="Grenewich Village"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" component="h2">
+                    Greenwich Village
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://i.imgur.com/wHgMbjc.jpg"
+                  alt="Grenewich Village"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" component="h2">
+                    Midtown East
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image="https://i.imgur.com/wHgMbjc.jpg"
+                  alt="Grenewich Village"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" component="h2">
+                    Downtown Brooklyn
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
-        <Card>
-          <CardMedia
-            component="img"
-            image = "https://png.pngtree.com/background/20210711/original/pngtree-colorful-people-silhouette-running-flying-corporate-culture-poster-background-picture-image_1065029.jpg"
-            alt="random"
-          />
-        </Card>
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">

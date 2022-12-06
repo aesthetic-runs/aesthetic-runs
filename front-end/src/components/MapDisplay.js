@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 // import TextField from "@mui/material/TextField";
-import axios from "axios";
+// import axios from "axios";
 
 const MapDisplay = () => {
   const mapStyles = {
@@ -10,8 +10,8 @@ const MapDisplay = () => {
   };
 
   const [currentPosition, setCurrentPosition] = useState({});
-  const [origin, setOrigin] = useState("");
-  const [destination, setDestination] = useState("");
+  // const [origin, setOrigin] = useState("");
+  // const [destination, setDestination] = useState("");
 
   const success = (position) => {
     const currentPosition = {
@@ -23,7 +23,7 @@ const MapDisplay = () => {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success);
-  });
+  }, []);
 
   const apiKey = process.env.REACT_APP_GOOGLE_MAPS;
 
@@ -56,21 +56,21 @@ const MapDisplay = () => {
   //   console.log("onClick args: ", args);
   // }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log();
-    axios
-      .get(
-        `https://maps.googleapis.com/maps/api/directions/json?origin=${origin
-          .split(" ")
-          .join("+")}&destination=${destination
-          .split(" ")
-          .join("+")}&key=AIzaSyBdpVegJQwfCCXq-chjswygW1rBbhBE0Gs`
-      )
-      .then((res) => {
-        console.log(res);
-      });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log();
+  //   axios
+  //     .get(
+  //       `https://maps.googleapis.com/maps/api/directions/json?origin=${origin
+  //         .split(" ")
+  //         .join("+")}&destination=${destination
+  //         .split(" ")
+  //         .join("+")}&key=AIzaSyBdpVegJQwfCCXq-chjswygW1rBbhBE0Gs`
+  //     )
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // };
 
   return (
     <div>
@@ -102,7 +102,7 @@ const MapDisplay = () => {
                 </div>
               </div>
             </div> */}
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter origin"
@@ -116,7 +116,7 @@ const MapDisplay = () => {
           onChange={(e) => setDestination(e.target.value)}
         />
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
 
       <LoadScript googleMapsApiKey={apiKey}>
         <GoogleMap

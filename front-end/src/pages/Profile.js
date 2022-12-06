@@ -15,12 +15,12 @@ import {
   MDBProgressBar,
   MDBIcon,
   MDBListGroup,
-  MDBListGroupItem
-} from 'mdb-react-ui-kit';
+  MDBListGroupItem,
+} from "mdb-react-ui-kit";
 
 export default function ProfilePage() {
   return (
-    <section style={{ backgroundColor: '#eee' }}>
+    <section style={{ backgroundColor: "#eee" }}>
       <MDBContainer className="py-5">
         {/* <MDBRow>
           <MDBCol>
@@ -44,13 +44,16 @@ export default function ProfilePage() {
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                   alt="avatar"
                   className="rounded-circle"
-                  style={{ width: '150px' }}
-                  fluid />
+                  style={{ width: "150px" }}
+                  fluid
+                />
                 <p className="text-muted mb-1">ME</p>
                 <p className="text-muted mb-4">Bay Area, CA</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Follow</MDBBtn>
-                  <MDBBtn outline className="ms-1">Message</MDBBtn>
+                  <MDBBtn outline className="ms-1">
+                    Message
+                  </MDBBtn>
                 </div>
               </MDBCardBody>
             </MDBCard>
@@ -60,7 +63,9 @@ export default function ProfilePage() {
                 <MDBListGroup flush className="rounded-3">
                   <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                     <MDBIcon fas icon="globe fa-lg text-warning" />
-                    <MDBCardText>Member of Aesthetic Runs since November 2022</MDBCardText>
+                    <MDBCardText>
+                      Member of Aesthetic Runs since November 2022
+                    </MDBCardText>
                   </MDBListGroupItem>
                   {/* <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                     <MDBIcon fab icon="github fa-lg" style={{ color: '#333333' }} />
@@ -90,7 +95,9 @@ export default function ProfilePage() {
                     <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">Caroline Tian</MDBCardText>
+                    <MDBCardText className="text-muted">
+                      Caroline Tian
+                    </MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -99,7 +106,9 @@ export default function ProfilePage() {
                     <MDBCardText>Email</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">caroline.tian@nyu.edu</MDBCardText>
+                    <MDBCardText className="text-muted">
+                      caroline.tian@nyu.edu
+                    </MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -108,7 +117,9 @@ export default function ProfilePage() {
                     <MDBCardText>Phone</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">(510) 320-1799</MDBCardText>
+                    <MDBCardText className="text-muted">
+                      (510) 320-1799
+                    </MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -117,7 +128,9 @@ export default function ProfilePage() {
                     <MDBCardText>Address</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">Bay Area, San Francisco, CA</MDBCardText>
+                    <MDBCardText className="text-muted">
+                      Bay Area, San Francisco, CA
+                    </MDBCardText>
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
@@ -127,28 +140,58 @@ export default function ProfilePage() {
               <MDBCol md="6">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
-                    <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">My Favorite</span> Aesthetic Runs</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>Washington Square Park - New York City, NY</MDBCardText>
+                    <MDBCardText className="mb-4">
+                      <span className="text-primary font-italic me-1">
+                        My Favorite
+                      </span>{" "}
+                      Aesthetic Runs
+                    </MDBCardText>
+                    <MDBCardText
+                      className="mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Washington Square Park - New York City, NY
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={80} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Empire State Building - New York City, NY</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Empire State Building - New York City, NY
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={72} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Central Park - New York City, NY</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Central Park - New York City, NY
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={89} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Venice Beach - Los Angeles, CA</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Venice Beach - Los Angeles, CA
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={55} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Mission Peak - Fremont, CA</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Mission Peak - Fremont, CA
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={66} valuemin={0} valuemax={100} />
                     </MDBProgress>
@@ -159,28 +202,58 @@ export default function ProfilePage() {
               <MDBCol md="6">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
-                    <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">My Aesthetic Runs</span> Friends</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>Matthew Apuya</MDBCardText>
+                    <MDBCardText className="mb-4">
+                      <span className="text-primary font-italic me-1">
+                        My Aesthetic Runs
+                      </span>{" "}
+                      Friends
+                    </MDBCardText>
+                    <MDBCardText
+                      className="mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Matthew Apuya
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={80} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Talal Said</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Talal Said
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={72} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Kevin Park</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Kevin Park
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={89} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Professor Korth</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Professor Korth
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={55} valuemin={0} valuemax={100} />
                     </MDBProgress>
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Beyonce</MDBCardText>
+                    <MDBCardText
+                      className="mt-4 mb-1"
+                      style={{ fontSize: ".77rem" }}
+                    >
+                      Beyonce
+                    </MDBCardText>
                     <MDBProgress className="rounded">
                       <MDBProgressBar width={66} valuemin={0} valuemax={100} />
                     </MDBProgress>
@@ -240,7 +313,7 @@ export default function ProfilePage() {
 //               image="https://cdn-icons-png.flaticon.com/512/3135/3135823.png"
 //               alt="random"
 //             />
-//           </Card> 
+//           </Card>
 //           <Typography
 //               component="h1"
 //               variant="h2"
