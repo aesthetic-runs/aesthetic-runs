@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 // import MapDisplay from "../components/MapDisplay";
 // import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
@@ -21,15 +22,44 @@ class GoogleMaps extends Component {
       //origin is set to eataly NYC flatiron location (200 5th Avenue)
       const origin = { lat: 40.742213, lng: -73.989588 };
 
-      //destination is set to empire state building
-      // const destination = { lat: 41.756795, lng: -78.954298 };
-      const destination = { lat: 40.748817, lng: -73.985428 };
+      //waypoint is set to empire state building
+      //const waypt = { lat: 40.748817, lng: -73.985428 };
+      const waypt = [
+        {
+          //empire state building
+          location: { lat: 40.748817, lng: -73.985428 },
+          stopover: true,
+        },
+        {
+          //times square
+          location: { lat: 40.758896, lng: -73.985130 },
+          stopover: true,
+        },
+      ];
+
+      //destination is set back to to eataly NYC flatiron location (200 5th Avenue)
+      ////const destination = { lat: 41.756795, lng: -78.954298 };
+      //const destination = { lat: 40.748817, lng: -73.985428 };
+      const destination = { lat: 40.742213, lng: -73.989588 };
 
       directionsService.route(
         {
           origin: origin,
           destination: destination,
-          travelMode: window.google.maps.TravelMode.WALKING
+          waypoints: waypt,
+          travelMode: window.google.maps.TravelMode.WALKING,
+          //waypts: waypt
+          // [
+          //   {
+          //     //empire state
+          //     //location: window.google.maps.LatLng(40.748817, -73.985428)
+          //     //location = { lat: 40.748817, lng: -73.985428 };
+          //   },
+          //   {
+          //     //times square
+          //     //location: new window.google.maps.LatLng(40.758896, -73.985130)
+          //   }
+          // ]
         },
         (result, status) => {
           if (status === window.google.maps.DirectionsStatus.OK) {
@@ -50,7 +80,6 @@ class GoogleMaps extends Component {
             bootstrapURLKeys={{
               //key: "YOUR_API_KEY"
               key: process.env.REACT_APP_GOOGLE_MAPS
-              // key: "AIzaSyDbkwPEnUrm0tS38IADZupex-I30a7txp4"
             }}
             defaultCenter={{ lat: -3.745, lng: -38.523 }}
             defaultZoom={10}
