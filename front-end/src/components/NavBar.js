@@ -84,14 +84,14 @@ function NavBar(props) {
             <Button component={Link} to="/Map" sx={{ color: "#fff" }}>
               Map
             </Button>
-            <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
-              Login
-            </Button>
-            <Button component={Link} to="/Profile" sx={{ color: "#fff" }}>
+            {/* <Button component={Link} to="/Profile" sx={{ color: "#fff" }}>
               Profile
-            </Button>
+            </Button> */}
             <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
               QuickRuns
+            </Button>
+            <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
+              Login
             </Button>
           </Box>
         </Toolbar>

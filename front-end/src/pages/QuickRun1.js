@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-// import MapDisplay from "../components/MapDisplay";
-// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
 class GoogleMaps extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       currentLocation: { lat: 40.756795, lng: -73.954298 },
-      key: process.env.REACT_APP_GOOGLE_MAPS
+      key: process.env.REACT_APP_GOOGLE_MAPS,
     };
   }
 
@@ -37,14 +33,13 @@ class GoogleMaps extends Component {
         },
         {
           //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.746600, lng: -73.994193 },
+          location: { lat: 40.7466, lng: -73.994193 },
           stopover: true,
         },
       ];
 
       //destination is set to to Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
       const destination = { lat: 40.742213, lng: -73.989588 };
-
 
       directionsService.route(
         {
@@ -62,26 +57,22 @@ class GoogleMaps extends Component {
         }
       );
     };
+
     return (
-      <div>
-        <div style={{ height: "600px", width: "100%" }}>
-        {/* <div className="Map">
-          <MapDisplay />
-        </div> */}
-          <GoogleMapReact
-            bootstrapURLKeys={{
-              //key: "YOUR_API_KEY"
-              key: process.env.REACT_APP_GOOGLE_MAPS
-            }}
-            defaultCenter={{ lat: -3.745, lng: -38.523 }}
-            defaultZoom={10}
-            center={this.state.currentLocation}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
-          />
-        </div>
+      <div style={{ height: "93vh", width: "100%" }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: process.env.REACT_APP_GOOGLE_MAPS,
+          }}
+          defaultCenter={{ lat: -3.745, lng: -38.523 }}
+          defaultZoom={10}
+          center={this.state.currentLocation}
+          yesIWantToUseGoogleMapApiInternals
+          onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+        />
       </div>
     );
   }
 }
+
 export default GoogleMaps;
