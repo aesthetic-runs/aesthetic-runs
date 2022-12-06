@@ -54,7 +54,8 @@ export default function Home() {
             >
               <CardMedia
                 component="img"
-                image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
+                image="https://i.pinimg.com/736x/d4/0e/1e/d40e1eb37fdf0482d00ef3f193730993.jpg"
+                //image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
                 alt="random"
               />
             </Card>
