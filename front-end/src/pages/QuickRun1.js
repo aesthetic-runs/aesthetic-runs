@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-// import MapDisplay from "../components/MapDisplay";
-// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
 class GoogleMaps extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +41,6 @@ class GoogleMaps extends Component {
       //destination is set to to Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
       const destination = { lat: 40.742213, lng: -73.989588 };
 
-
       directionsService.route(
         {
           origin: origin,
@@ -62,15 +57,11 @@ class GoogleMaps extends Component {
         }
       );
     };
+
     return (
-      <div>
-        <div style={{ height: "600px", width: "100%" }}>
-        {/* <div className="Map">
-          <MapDisplay />
-        </div> */}
+      <div style={{ height: "93vh", width: "100%" }}>
           <GoogleMapReact
             bootstrapURLKeys={{
-              //key: "YOUR_API_KEY"
               key: process.env.REACT_APP_GOOGLE_MAPS
             }}
             defaultCenter={{ lat: -3.745, lng: -38.523 }}
@@ -79,9 +70,9 @@ class GoogleMaps extends Component {
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
           />
-        </div>
       </div>
     );
   }
 }
+
 export default GoogleMaps;
