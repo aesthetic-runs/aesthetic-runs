@@ -8,7 +8,9 @@ import Login from "./pages/Login";
 import Map from "./pages/Map";
 // import Profile from "./pages/Profile";
 import QuickRuns from "./pages/QuickRuns";
-import QuickRun1 from "./pages/QuickRun1";
+import QuickRunEmpireState from "./pages/QuickRunEmpireState";
+import QuickRunLincolnCenter from "./pages/QuickRunLincolnCenter";
+import QuickRunStatueLiberty from "./pages/QuickRunStatueLiberty";
 import Registration from "./pages/Registration";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
@@ -23,7 +25,9 @@ export default function App() {
           <Route path="map" element={<Map />} />
           {/* <Route path="profile" element={<Profile />} /> */}
           <Route path="quickruns" element={<QuickRuns />} />
-          <Route path="quickrun1" element={<QuickRun1 />} />
+          <Route path="quickrunempirestate" element={<QuickRunEmpireState />} />
+          <Route path="quickrunlincolncenter" element={<QuickRunLincolnCenter />} />
+          <Route path="quickrunstatueliberty" element={<QuickRunStatueLiberty />} />
           <Route path="registration" element={<Registration />} />
           <Route path="*" element={<NoPage />} />
         </Route>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+
 class GoogleMaps extends Component {
   constructor(props) {
     super(props);
@@ -16,30 +17,20 @@ class GoogleMaps extends Component {
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
 
-      //origin is set to NYU College of Dentistry, 345 E 24th St, New York, NY 10010
-      const origin = { lat: 40.738164, lng: -73.978216 };
+      //origin is set to Columbus Circle, 848 Columbus Cir, New York, NY 10019
+      const origin = { lat: 40.768411, lng: -73.981885 };
 
-      //waypoint are set to multiple locations for the Empire State 2 mile run
+      //waypoint are set to multiple locations for the Lincoln Center 1 mile run
       const waypt = [
         {
-          //The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016
-          location: { lat: 40.749226, lng: -73.981397 },
-          stopover: true,
-        },
-        {
-          //Empire State Building, 20 W 34th St., New York, NY 10001
-          location: { lat: 40.748817, lng: -73.985428 },
-          stopover: true,
-        },
-        {
-          //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.7466, lng: -73.994193 },
+          //Lincoln Center for the Performing Arts, Lincoln Center Plaza, New York, NY 10023
+          location: { lat: 40.772692, lng: -73.983425 },
           stopover: true,
         },
       ];
 
-      //destination is set to to Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
-      const destination = { lat: 40.742213, lng: -73.989588 };
+      //destination is set to to Strawberry Fields, New York, NY 10023
+      const destination = { lat: 40.775967, lng: -73.974740 };
 
       directionsService.route(
         {

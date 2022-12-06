@@ -54,7 +54,8 @@ export default function Home() {
             >
               <CardMedia
                 component="img"
-                image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
+                image="https://i.pinimg.com/736x/d4/0e/1e/d40e1eb37fdf0482d00ef3f193730993.jpg"
+                //image="https://image.shutterstock.com/image-vector/running-person-silhouette-on-white-260nw-1904105359.jpg"
                 alt="random"
               />
             </Card>
@@ -99,7 +100,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun1"
+                    to="/QuickRunEmpireState"
                     variant="contained"
                   >
                     Run the route!
@@ -125,7 +126,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  image="https://cdn.britannica.com/57/163657-050-2AC2C4F8/Night-view-Lincoln-Center-for-the-Performing.jpg"
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -134,7 +135,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun2"
+                    to="/QuickRunLincolnCenter"
                     variant="contained"
                   >
                     Run the route!
@@ -152,7 +153,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  image="https://images.unsplash.com/photo-1503572327579-b5c6afe5c5c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -161,7 +162,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun3"
+                    to="/QuickRunStatueLiberty"
                     variant="contained"
                   >
                     Run the route!
