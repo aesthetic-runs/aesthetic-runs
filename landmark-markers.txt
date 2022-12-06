@@ -10,6 +10,10 @@ lat: 40.701240, lng: -74.015272 //Statue of Liberty View Point
 lat: 40.703118, lng: -74.015339 //The Battery, New York, NY 10004
 lat: 40.731319, lng: -73.995094 //Weinstein Hall, 5 University Pl, New York, NY 10003
 
+lat: 40.768411, lng: -73.981885 //Columbus Circle, 848 Columbus Cir, New York, NY 10019
+lat: 40.772692, lng: -73.983425 //Lincoln Center for the Performing Arts, Lincoln Center Plaza, New York, NY 10023
+lat: 40.775967, lng: -73.974740 //Strawberry Fields, New York, NY 10023
+
 lat: 40.741183, lng: -74.009100 //little island (pier55)
 lat: 40.735863, lng: -73.991083 //union square
 lat: 40.747993, lng: -74.004890 //the high line
