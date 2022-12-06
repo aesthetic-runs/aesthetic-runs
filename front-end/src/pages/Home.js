@@ -145,8 +145,8 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://i.imgur.com/wHgMbjc.jpg"
-                  alt="Grenewich Village"
+                  image="https://i.imgur.com/wrCBULb.png"
+                  alt="Midtown East"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h2">

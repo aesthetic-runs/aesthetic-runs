@@ -6,14 +6,12 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Map from "./pages/Map";
-import Profile from "./pages/Profile";
+// import Profile from "./pages/Profile";
 import QuickRuns from "./pages/QuickRuns";
 import QuickRun1 from "./pages/QuickRun1";
 import Registration from "./pages/Registration";
-import Dashboard from "./pages/Dashboard";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
-import Landmarks from "./pages/Landmarks";
 
 export default function App() {
   return (
@@ -23,12 +21,10 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="map" element={<Map />} />
-          <Route path="profile" element={<Profile />} />
+          {/* <Route path="profile" element={<Profile />} /> */}
           <Route path="quickruns" element={<QuickRuns />} />
           <Route path="quickrun1" element={<QuickRun1 />} />
           <Route path="registration" element={<Registration />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="landmarks" element={<Landmarks />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
