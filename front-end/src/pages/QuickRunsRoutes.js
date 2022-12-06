@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-import MapDisplay from "../components/MapDisplay";
+// import MapDisplay from "../components/MapDisplay";
 // import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 class GoogleMaps extends Component {
@@ -67,7 +67,7 @@ export default GoogleMaps;
 
 //"use strict";
 
-{/* <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+/* <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 
 let DirectionsService = new window.google.maps.DirectionsService();
 
@@ -96,4 +96,4 @@ function calcRoute() {
         }
     });
 }
-; */}
+; */
