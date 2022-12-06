@@ -125,7 +125,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  image="https://cdn.britannica.com/57/163657-050-2AC2C4F8/Night-view-Lincoln-Center-for-the-Performing.jpg"
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -152,7 +152,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                  image="https://images.unsplash.com/photo-1503572327579-b5c6afe5c5c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
