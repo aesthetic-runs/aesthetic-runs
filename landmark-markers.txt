@@ -14,4 +14,4 @@ lat: 40.730824, lng: -73.997330 //washington square park
 lat: 40.768410, lng: -73.982018 //columbus circle
 lat: 40.706001, lng: -73.997002 //brooklyn bridge
 lat: 40.712742, lng: -74.013382 //one world observatory
-lat: 40.718922, lng: -73.974383 //john v. lindsay east rver park
+lat: 40.718922, lng: -73.974383 //john v. lindsay east river park
