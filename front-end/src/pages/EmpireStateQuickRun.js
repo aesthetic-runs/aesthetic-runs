@@ -19,28 +19,32 @@ class GoogleMaps extends Component {
       const directionsService = new window.google.maps.DirectionsService();
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      //origin is set to eataly NYC flatiron location (200 5th Avenue)
-      const origin = { lat: 40.742213, lng: -73.989588 };
 
-      //waypoint is set to empire state building
-      //const waypt = { lat: 40.748817, lng: -73.985428 };
+      //origin is set to NYU College of Dentistry, 345 E 24th St, New York, NY 10010
+      const origin = { lat: 40.738164, lng: -73.978216 };
+
+      //waypoint are set to multiple locations for the Empire State 2 mile run
       const waypt = [
         {
-          //empire state building
+          //The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016
+          location: { lat: 40.749226, lng: -73.981397 },
+          stopover: true,
+        },
+        {
+          //Empire State Building, 20 W 34th St., New York, NY 10001
           location: { lat: 40.748817, lng: -73.985428 },
           stopover: true,
         },
         {
-          //times square
-          location: { lat: 40.758896, lng: -73.985130 },
+          //The Museum at FIT, 227 W 27th St, New York, NY 10001
+          location: { lat: 40.746600, lng: -73.994193 },
           stopover: true,
         },
       ];
 
-      //destination is set back to to eataly NYC flatiron location (200 5th Avenue)
-      ////const destination = { lat: 41.756795, lng: -78.954298 };
-      //const destination = { lat: 40.748817, lng: -73.985428 };
+      //destination is set to to Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
       const destination = { lat: 40.742213, lng: -73.989588 };
+
 
       directionsService.route(
         {
@@ -48,18 +52,6 @@ class GoogleMaps extends Component {
           destination: destination,
           waypoints: waypt,
           travelMode: window.google.maps.TravelMode.WALKING,
-          //waypts: waypt
-          // [
-          //   {
-          //     //empire state
-          //     //location: window.google.maps.LatLng(40.748817, -73.985428)
-          //     //location = { lat: 40.748817, lng: -73.985428 };
-          //   },
-          //   {
-          //     //times square
-          //     //location: new window.google.maps.LatLng(40.758896, -73.985130)
-          //   }
-          // ]
         },
         (result, status) => {
           if (status === window.google.maps.DirectionsStatus.OK) {
@@ -94,6 +86,7 @@ class GoogleMaps extends Component {
 }
 export default GoogleMaps;
 
+
 //"use strict";
 
 /* <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
@@ -126,3 +119,4 @@ function calcRoute() {
     });
 }
 ; */
+
