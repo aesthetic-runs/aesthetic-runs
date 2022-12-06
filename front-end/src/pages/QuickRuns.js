@@ -132,7 +132,7 @@ export default function Home() {
                     </Typography>
                     <Button
                       component={RouterLink}
-                      to="/QuickRunsRoutes"
+                      to="/EmpireStateQuickRun"
                       variant="contained"
                       >
                       Run the route!
