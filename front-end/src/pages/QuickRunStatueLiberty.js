@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+
 class GoogleMaps extends Component {
   constructor(props) {
     super(props);
@@ -16,30 +17,30 @@ class GoogleMaps extends Component {
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
 
-      //origin is set to NYU College of Dentistry, 345 E 24th St, New York, NY 10010
-      const origin = { lat: 40.738164, lng: -73.978216 };
+      //origin is set to Washington Square Park, Washington Square, New York, NY 10012
+      const origin = { lat: 40.730827, lng: -73.997214 };
 
-      //waypoint are set to multiple locations for the Empire State 2 mile run
+      //waypoint are set to multiple locations for the Statue of Liberty run
       const waypt = [
         {
-          //The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016
-          location: { lat: 40.749226, lng: -73.981397 },
+          //Pier 26 at Hudson River Park, Hudson River Greenway, New York, NY 10013
+          location: { lat: 40.721321, lng: -74.013074 },
           stopover: true,
         },
         {
-          //Empire State Building, 20 W 34th St., New York, NY 10001
-          location: { lat: 40.748817, lng: -73.985428 },
+          //Statue of Liberty View Point
+          location: { lat: 40.701240, lng: -74.015272 },
           stopover: true,
         },
         {
-          //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.7466, lng: -73.994193 },
+          //The Battery, New York, NY 10004
+          location: { lat: 40.703118, lng: -74.015339 },
           stopover: true,
         },
       ];
 
-      //destination is set to to Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
-      const destination = { lat: 40.742213, lng: -73.989588 };
+      //destination is set to Weinstein Hall, 5 University Pl, New York, NY 10003
+      const destination = { lat: 40.731319, lng: -73.995094 };
 
       directionsService.route(
         {

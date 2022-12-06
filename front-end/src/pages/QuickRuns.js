@@ -99,7 +99,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun1"
+                    to="/QuickRunEmpireState"
                     variant="contained"
                   >
                     Run the route!
@@ -134,7 +134,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun2"
+                    to="/QuickRunLincolnCenter"
                     variant="contained"
                   >
                     Run the route!
@@ -161,7 +161,7 @@ export default function Home() {
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRun3"
+                    to="/QuickRunStatueLiberty"
                     variant="contained"
                   >
                     Run the route!
