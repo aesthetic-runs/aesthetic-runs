@@ -30,8 +30,6 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3];
-
 const theme = createTheme();
 
 export default function Home() {
@@ -77,43 +75,12 @@ export default function Home() {
             >
               Select a pre-routed map route to start your run!
             </Typography>
-            {/* <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Total Stats!</Button>
-              <Button
-                component={RouterLink}
-                to="/QuickRuns"
-                variant="contained"
-              >
-                1 mile
-              </Button>
-              <Button
-                component={RouterLink}
-                to="/Profile"
-                variant="contained"
-              >
-                3 miles
-              </Button>
-              <Button
-                component={RouterLink}
-                to="/Profile"
-                variant="contained"
-              >
-                5 miles
-              </Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack> */}
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+              <Grid item xs={12} sm={6} md={4}>
                 <Card
                   sx={{
                     height: "100%",
@@ -128,11 +95,11 @@ export default function Home() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Empire State Building
+                      Empire State
                     </Typography>
                     <Button
                       component={RouterLink}
-                      to="/EmpireStateQuickRun"
+                      to="/QuickRun1"
                       variant="contained"
                       >
                       Run the route!
@@ -148,7 +115,60 @@ export default function Home() {
                   </CardActions>
                 </Card>
               </Grid>
-            ))}
+              <Grid item xs={12} sm={6} md={4}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                    alt="random"
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Lincoln Center
+                    </Typography>
+                    <Button
+                      component={RouterLink}
+                      to="/QuickRun2"
+                      variant="contained"
+                      >
+                      Run the route!
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="https://marvel-b1-cdn.bc0a.com/f00000000179470/www.esbnyc.com/sites/default/files/styles/small_feature/public/2019-10/home_banner-min.jpg?itok=uZt-03Vw"
+                    alt="random"
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Statue of Liberty
+                    </Typography>
+                    <Button
+                      component={RouterLink}
+                      to="/QuickRun3"
+                      variant="contained"
+                      >
+                      Run the route!
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
           </Grid>
         </Container>
       </main>
