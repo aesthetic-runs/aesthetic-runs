@@ -152,6 +152,13 @@ export default function Home() {
                   <Typography variant="h5" component="h2">
                     Midtown East
                   </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/PopularRunMidtownEastArchitecture"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
                 </CardContent>
               </Card>
             </Grid>
@@ -166,7 +173,7 @@ export default function Home() {
                 <CardMedia
                   component="img"
                   image="https://i.imgur.com/wHgMbjc.jpg"
-                  alt="Grenewich Village"
+                  alt="Central Park"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h2">
