@@ -126,7 +126,7 @@ export default function Home() {
                 <CardMedia
                   component="img"
                   image="https://i.imgur.com/wHgMbjc.jpg"
-                  alt="Grenewich Village"
+                  alt="Greenwich Village"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h2">
@@ -170,8 +170,15 @@ export default function Home() {
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h2">
-                    Downtown Brooklyn
+                    Central Park
                   </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/PopularRunCentralPark"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
                 </CardContent>
               </Card>
             </Grid>
