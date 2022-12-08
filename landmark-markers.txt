@@ -1,3 +1,8 @@
+//Popular Run Hudson River
+lat: 40.754459, lng: -74.002129 //Vessel, 20 Hudson Yards, New York, NY 10001
+lat: 40.748997, lng: -74.008566 //Chelsea Piers, 62 Chelsea Piers, New York, NY 10011
+lat: 40.742104, lng: -74.010025 //Little Island, Pier55 in Hudson River Park @, W 13th St, New York, NY 10014
+
 //Popular Run Midtown East Architecture Route - 2 miles
 lat: 40.753294, lng: -73.977161 //Grand Central Terminal, 89 E 42nd St, New York, NY 10017
 lat: 40.759523, lng: -73.976239 //St. Patrick's Cathedral, 5th Ave, New York, NY 10022
