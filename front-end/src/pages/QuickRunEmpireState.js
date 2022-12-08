@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+//import { GoogleMap, Marker, DirectionsRenderer } from "react-google-maps";
+//import { GoogleMapLoader, GoogleMap, Marker, DirectionsRenderer } from "react-google-maps";
 
 class GoogleMaps extends Component {
   constructor(props) {
@@ -71,7 +73,13 @@ class GoogleMaps extends Component {
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
         />
+        {/* <DirectionsRenderer
+          directions={{
+            origin: { lat: 40.738164, lng: -73.978216 } ,
+            destination:{ lat: 40.742213, lng: -73.989588 }
+          }}/> */}
       </div>
+      
     );
   }
 }
