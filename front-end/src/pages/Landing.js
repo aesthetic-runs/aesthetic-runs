@@ -1,6 +1,4 @@
 import React from "react";
-import './landing.css';
-// import background from "./img/ARbackground.jpeg";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 // import CardActions from "@mui/material/CardActions";
@@ -47,7 +45,7 @@ function Landing() {
       align="center"
       color="text.primary"
       >
-      Aesthetic Runs
+      AESTHETIC RUNS
     </Typography>
     <Stack
       sx={{ pt: 6 }}
@@ -61,7 +59,14 @@ function Landing() {
       to="/Registration"
       variant="contained"
     >
-      Sign up!
+      Sign up
+    </Button>
+    <Button
+      component={RouterLink}
+      to="/Login"
+      variant="contained"
+    >
+      Login
     </Button>
     </Stack>
     </div>
