@@ -1,4 +1,12 @@
-//Popular Run Central Park Route
+//Popular Run Midtown East Architecture Route - 2 miles
+lat: 40.753294, lng: -73.977161 //Grand Central Terminal, 89 E 42nd St, New York, NY 10017
+lat: 40.759523, lng: -73.976239 //St. Patrick's Cathedral, 5th Ave, New York, NY 10022
+lat: 40.762339, lng: -73.977354 //The Museum of Modern Art, 11 W 53rd St, New York, NY 10019
+lat: 40.761248, lng: -73.980097 //Radio City Music Hall, 1260 6th Ave, New York, NY 10020
+lat: 40.753749, lng: -73.978702 //SUMMIT One Vanderbilt, 45 E 42nd St, New York, NY 10017
+lat: 40.752094, lng: -73.975402 //Chrysler Building, 405 Lexington Ave, New York, NY 10174
+
+//Popular Run Central Park Route - 5 miles
 lat: 40.799390, lng: -73.952404 //Central Park North (110 St)
 lat: 40.797650, lng: -73.956022 //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
 lat: 40.795080, lng: -73.959318 //Glen Span Arch
@@ -10,19 +18,19 @@ lat: 40.771785, lng: -73.974819 //Sheep Meadow, 1802 65th Street Transverse, New
 lat: 40.768730, lng: -73.974476 //Wollman Rink, Central Park S, New York, NY 10019
 lat: 40.769055, lng: -73.981686 //Columbus Circle, 848 Columbus Cir, New York, NY 10019
 
-//Quick Run Empire State Building Route
+//Quick Run Empire State Building Route - 2.5 miles
 lat: 40.748817, lng: -73.985428 //Empire State Building, 20 W 34th St., New York, NY 10001
 lat: 40.749226, lng: -73.981397 //The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016
 lat: 40.746600, lng: -73.994193 //The Museum at FIT, 227 W 27th St, New York, NY 10001
 lat: 40.742213, lng: -73.989588 //Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010
 lat: 40.738164, lng: -73.978216 //NYU College of Dentistry, 345 E 24th St, New York, NY 10010
 
-//Quick Run Lincoln Center Route
+//Quick Run Lincoln Center Route - 1 mile
 lat: 40.768411, lng: -73.981885 //Columbus Circle, 848 Columbus Cir, New York, NY 10019
 lat: 40.772692, lng: -73.983425 //Lincoln Center for the Performing Arts, Lincoln Center Plaza, New York, NY 10023
 lat: 40.775967, lng: -73.974740 //Strawberry Fields, New York, NY 10023
 
-//Quick Run Statue of Liberty Route
+//Quick Run Statue of Liberty Route - 5 miles
 lat: 40.730827, lng: -73.997214 //Washington Square Park, Washington Square, New York, NY 10012
 lat: 40.721321, lng: -74.013074 //Pier 26 at Hudson River Park, Hudson River Greenway, New York, NY 10013
 lat: 40.701240, lng: -74.015272 //Statue of Liberty View Point

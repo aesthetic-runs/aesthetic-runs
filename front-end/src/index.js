@@ -12,6 +12,7 @@ import QuickRunEmpireState from "./pages/QuickRunEmpireState";
 import QuickRunLincolnCenter from "./pages/QuickRunLincolnCenter";
 import QuickRunStatueLiberty from "./pages/QuickRunStatueLiberty";
 import PopularRunCentralPark from "./pages/PopularRunCentralPark";
+import PopularRunMidtownEastArchitecture from "./pages/PopularRunMidtownEastArchitecture";
 import Registration from "./pages/Registration";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="quickrunlincolncenter" element={<QuickRunLincolnCenter />} />
           <Route path="quickrunstatueliberty" element={<QuickRunStatueLiberty />} />
           <Route path="popularruncentralpark" element={<PopularRunCentralPark />} />
+          <Route path="popularrunmidtowneastarchitecture" element={<PopularRunMidtownEastArchitecture />} />
           <Route path="registration" element={<Registration />} />
           <Route path="*" element={<NoPage />} />
         </Route>

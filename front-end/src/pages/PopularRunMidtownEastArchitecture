@@ -21,55 +21,35 @@ class GoogleMaps extends Component {
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
 
-      //origin is set to Central Park North (110 St)
-      const origin = { lat: 40.799390, lng: -73.952404 };
+      //origin is set to Grand Central Terminal, 89 E 42nd St, New York, NY 10017
+      const origin = { lat: 40.753294, lng: -73.977161 };
 
-      //waypoint are set to multiple locations for the Statue of Liberty run
+      //waypoint are set to multiple locations for the Midtown East Architecture run
       const waypt = [
         {
-          //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
-          location: { lat: 40.797650, lng: -73.956022 },
+          //St. Patrick's Cathedral, 5th Ave, New York, NY 10022
+          location: { lat: 40.759523, lng: -73.976239 },
           stopover: true,
         },
         {
-          //Glen Span Arch
-          location: { lat: 40.795080, lng: -73.959318 },
+          //The Museum of Modern Art, 11 W 53rd St, New York, NY 10019
+          location: { lat: 40.762339, lng: -73.977354 },
           stopover: true,
         },
         {
-          //Jacqueline Kennedy Onassis Reservoir, New York, NY 10128
-          location: { lat: 40.787578, lng: -73.962631 },
+          //Radio City Music Hall, 1260 6th Ave, New York, NY 10020
+          location: { lat: 40.761248, lng: -73.980097 },
           stopover: true,
         },
         {
-          //The Metropolitan Museum of Art, 1000 5th Ave, New York, NY 10028
-          location: { lat: 40.781274, lng: -73.962803 },
-          stopover: true,
-        },
-        {
-          //American Museum of Natural History, 200 Central Park West, New York, NY 10024
-          location: { lat: 40.783029, lng: -73.974219 },
-          stopover: true,
-        },
-        {
-          //Bethesda Fountain, New York, NY 10024
-          location: { lat: 40.775945, lng: -73.970957 },
-          stopover: true,
-        },
-        {
-          //Sheep Meadow, 1802 65th Street Transverse, New York, NY 10065
-          location: { lat: 40.771785, lng: -73.974819 },
-          stopover: true,
-        },
-        {
-          //Wollman Rink, Central Park S, New York, NY 10019
-          location: { lat: 40.768730, lng: -73.974476 },
+          //SUMMIT One Vanderbilt, 45 E 42nd St, New York, NY 10017
+          location: { lat: 40.753749, lng: -73.978702 },
           stopover: true,
         },
       ];
 
-      //destination is set to Columbus Circle, 848 Columbus Cir, New York, NY 10019
-      const destination = { lat: 40.769055, lng: -73.981686 };
+      //destination is set to Chrysler Building, 405 Lexington Ave, New York, NY 10174
+      const destination = { lat: 40.752094, lng: -73.975402  };
 
       directionsService.route(
         {
@@ -89,7 +69,7 @@ class GoogleMaps extends Component {
     };
 
     return (
-      <div style={{ height: "87vh", width: "100%" }}>
+      <div style={{ height: "93vh", width: "100%" }}>
         <Container maxWidth="40px">
             <Typography
               //component="h1"
@@ -98,7 +78,7 @@ class GoogleMaps extends Component {
               color="text.primary"
               gutterBottom
             >
-              Popular Run: Central Park - 5 miles
+              Popular Run: Midtown East Architectural Buildings - 2 miles
             </Typography>
         </Container>
         <GoogleMapReact
