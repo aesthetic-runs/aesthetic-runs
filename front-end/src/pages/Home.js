@@ -126,12 +126,19 @@ export default function Home() {
                 <CardMedia
                   component="img"
                   image="https://i.imgur.com/wHgMbjc.jpg"
-                  alt="Greenwich Village"
+                  alt="Hudson River"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h2">
-                    Greenwich Village
+                    Hudson River
                   </Typography>
+                  <Button
+                    component={RouterLink}
+                    to="/PopularRunHudsonRiver"
+                    variant="contained"
+                  >
+                    Run the route!
+                  </Button>
                 </CardContent>
               </Card>
             </Grid>
