@@ -49,11 +49,6 @@ function NavBar(props) {
             <ListItemText>Login</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/Landing">
-            <ListItemText>Landing</ListItemText>
-          </ListItemButton>
-        </ListItem>
       </List>
     </Box>
   );
