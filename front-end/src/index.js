@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+//import Landing from "./pages/Landing";
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Map from "./pages/Map";
@@ -23,9 +25,11 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Landing />} />
+          <Route path="Home" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="map" element={<Map />} />
+          <Route path="landing" element={<Landing />} />
           {/* <Route path="profile" element={<Profile />} /> */}
           <Route path="quickruns" element={<QuickRuns />} />
           <Route path="quickrunempirestate" element={<QuickRunEmpireState />} />
