@@ -14,7 +14,6 @@ class GoogleMaps extends Component {
     };
   }
 
-
   render() {
     const apiIsLoaded = (map, maps) => {
       const directionsService = new window.google.maps.DirectionsService();
@@ -49,7 +48,7 @@ class GoogleMaps extends Component {
       ];
 
       //destination is set to Chrysler Building, 405 Lexington Ave, New York, NY 10174
-      const destination = { lat: 40.752094, lng: -73.975402  };
+      const destination = { lat: 40.752094, lng: -73.975402 };
 
       directionsService.route(
         {
@@ -71,15 +70,15 @@ class GoogleMaps extends Component {
     return (
       <div style={{ height: "93vh", width: "100%" }}>
         <Container maxWidth="40px">
-            <Typography
-              //component="h1"
-              variant="h8"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Popular Run: Midtown East Architectural Buildings - 2 miles
-            </Typography>
+          <Typography
+            //component="h1"
+            variant="h8"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Popular Run: Midtown East Architectural Buildings - 2 miles
+          </Typography>
         </Container>
         <GoogleMapReact
           bootstrapURLKeys={{

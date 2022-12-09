@@ -36,7 +36,7 @@ class GoogleMaps extends Component {
         },
         {
           //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.746600, lng: -73.994193 },
+          location: { lat: 40.7466, lng: -73.994193 },
           stopover: true,
         },
       ];
@@ -79,7 +79,6 @@ class GoogleMaps extends Component {
             destination:{ lat: 40.742213, lng: -73.989588 }
           }}/> */}
       </div>
-      
     );
   }
 }

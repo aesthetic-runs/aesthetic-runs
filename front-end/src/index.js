@@ -33,11 +33,26 @@ export default function App() {
           {/* <Route path="profile" element={<Profile />} /> */}
           <Route path="quickruns" element={<QuickRuns />} />
           <Route path="quickrunempirestate" element={<QuickRunEmpireState />} />
-          <Route path="quickrunlincolncenter" element={<QuickRunLincolnCenter />} />
-          <Route path="quickrunstatueliberty" element={<QuickRunStatueLiberty />} />
-          <Route path="popularrunhudsonriver" element={<PopularRunHudsonRiver />} />
-          <Route path="popularrunmidtowneastarchitecture" element={<PopularRunMidtownEastArchitecture />} />
-          <Route path="popularruncentralpark" element={<PopularRunCentralPark />} />
+          <Route
+            path="quickrunlincolncenter"
+            element={<QuickRunLincolnCenter />}
+          />
+          <Route
+            path="quickrunstatueliberty"
+            element={<QuickRunStatueLiberty />}
+          />
+          <Route
+            path="popularrunhudsonriver"
+            element={<PopularRunHudsonRiver />}
+          />
+          <Route
+            path="popularrunmidtowneastarchitecture"
+            element={<PopularRunMidtownEastArchitecture />}
+          />
+          <Route
+            path="popularruncentralpark"
+            element={<PopularRunCentralPark />}
+          />
           <Route path="registration" element={<Registration />} />
           <Route path="*" element={<NoPage />} />
         </Route>

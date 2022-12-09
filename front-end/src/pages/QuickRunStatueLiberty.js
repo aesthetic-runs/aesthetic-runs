@@ -29,7 +29,7 @@ class GoogleMaps extends Component {
         },
         {
           //Statue of Liberty View Point
-          location: { lat: 40.701240, lng: -74.015272 },
+          location: { lat: 40.70124, lng: -74.015272 },
           stopover: true,
         },
         {
