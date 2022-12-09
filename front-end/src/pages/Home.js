@@ -93,6 +93,13 @@ export default function Home() {
                 Sign up!
               </Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
+              <Button
+                component={RouterLink}
+                to="/Questionaire"
+                variant="contained"
+              >
+                Take the questionare!
+              </Button>
             </Stack>
 
             <Stack

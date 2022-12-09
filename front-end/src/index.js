@@ -19,6 +19,8 @@ import PopularRunCentralPark from "./pages/PopularRunCentralPark";
 import Registration from "./pages/Registration";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
+import Questionare from "./pages/Questionaire";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
@@ -33,12 +35,28 @@ export default function App() {
           {/* <Route path="profile" element={<Profile />} /> */}
           <Route path="quickruns" element={<QuickRuns />} />
           <Route path="quickrunempirestate" element={<QuickRunEmpireState />} />
-          <Route path="quickrunlincolncenter" element={<QuickRunLincolnCenter />} />
-          <Route path="quickrunstatueliberty" element={<QuickRunStatueLiberty />} />
-          <Route path="popularrunhudsonriver" element={<PopularRunHudsonRiver />} />
-          <Route path="popularrunmidtowneastarchitecture" element={<PopularRunMidtownEastArchitecture />} />
-          <Route path="popularruncentralpark" element={<PopularRunCentralPark />} />
+          <Route
+            path="quickrunlincolncenter"
+            element={<QuickRunLincolnCenter />}
+          />
+          <Route
+            path="quickrunstatueliberty"
+            element={<QuickRunStatueLiberty />}
+          />
+          <Route
+            path="popularrunhudsonriver"
+            element={<PopularRunHudsonRiver />}
+          />
+          <Route
+            path="popularrunmidtowneastarchitecture"
+            element={<PopularRunMidtownEastArchitecture />}
+          />
+          <Route
+            path="popularruncentralpark"
+            element={<PopularRunCentralPark />}
+          />
           <Route path="registration" element={<Registration />} />
+          <Route path="questionaire" element={<Questionare />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
