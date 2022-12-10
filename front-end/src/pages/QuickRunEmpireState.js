@@ -79,8 +79,39 @@ class GoogleMaps extends Component {
           onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
         />
         <div style={{ width: "50vw" }}>
-          <p>Anime NYC</p>
-          <p>Anime NYC</p>
+          <p>Quick Run Empire State Building Route - 2 miles!</p>
+          <p>Origin (A): NYU College of Dentistry, 345 E 24th St, New York, NY 10010</p>
+          <p>Directions: </p>
+          <p>Head northwest on E 24th St toward 2nd Ave - 0.6 mi</p>
+          <p>Turn right -318 ft</p>
+          <p>Turn left toward E 26th St/Madison Square N - 56 ft</p>
+          <p>Turn right toward E 26th St/Madison Square N - 33 ft</p>
+          <p>Turn right toward E 26th St/Madison Square N - 30 ft</p>
+          <p>Turn left toward E 26th St/Madison Square N - 269 ft</p>
+          <p>Turn left onto E 26th St/Madison Square N - 46 ft</p>
+          <p>Turn right onto 5th Ave - 0.4 mi </p>
+
+          <p>*Landmark B: Empire State Building, 20 W 34th St., New York, NY 10001</p>
+          <p>Head northeast on 5th Ave toward W 34th St. - 154 ft</p>
+          <p>Turn right onto E 34th St - 0.1 mi</p>
+          <p>Turn left onto Madison Ave - 0.1 mi</p>
+          <p>Turn right - 66 ft</p>
+          <p>Walk for 59 ft</p>
+
+          <p>*Landmark C: The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016</p>
+          <p>Walk for 59 ft</p>
+          <p>Head northwest toward Madison Ave - 66 ft</p>
+          <p>Turn left onto Madison Ave - 384 ft</p>
+          <p>Turn right onto E 35th St - 0.5 mi</p>
+          <p>Turn left onto 7th Ave/Fashion Ave - 0.4 mi</p>
+
+          <p>*Landmark D: The Museum at FIT, 227 W 27th St, New York, NY 10001</p>
+          <p>Head southwest on 7th Ave toward W 26th St - 180 ft</p>
+          <p>Turn left onto W 26th St - 0.3 mi</p>
+          <p>Turn right onto Broadway - 0.1 mi</p>
+          <p>Turn right onto 5th Ave - 164 ft</p>
+
+          <p>Destination (Landmark E): Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010</p>
         </div>
       </div>
     );
