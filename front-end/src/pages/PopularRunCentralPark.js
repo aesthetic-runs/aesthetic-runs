@@ -14,7 +14,6 @@ class GoogleMaps extends Component {
     };
   }
 
-
   render() {
     const apiIsLoaded = (map, maps) => {
       const directionsService = new window.google.maps.DirectionsService();
@@ -22,18 +21,18 @@ class GoogleMaps extends Component {
       directionsRenderer.setMap(map);
 
       //origin is set to Central Park North (110 St)
-      const origin = { lat: 40.799390, lng: -73.952404 };
+      const origin = { lat: 40.79939, lng: -73.952404 };
 
       //waypoint are set to multiple locations for the Statue of Liberty run
       const waypt = [
         {
           //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
-          location: { lat: 40.797650, lng: -73.956022 },
+          location: { lat: 40.79765, lng: -73.956022 },
           stopover: true,
         },
         {
           //Glen Span Arch
-          location: { lat: 40.795080, lng: -73.959318 },
+          location: { lat: 40.79508, lng: -73.959318 },
           stopover: true,
         },
         {
@@ -63,7 +62,7 @@ class GoogleMaps extends Component {
         },
         {
           //Wollman Rink, Central Park S, New York, NY 10019
-          location: { lat: 40.768730, lng: -73.974476 },
+          location: { lat: 40.76873, lng: -73.974476 },
           stopover: true,
         },
       ];
@@ -91,15 +90,15 @@ class GoogleMaps extends Component {
     return (
       <div style={{ height: "87vh", width: "100%" }}>
         <Container maxWidth="40px">
-            <Typography
-              //component="h1"
-              variant="h8"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Popular Run: Central Park - 5 miles
-            </Typography>
+          <Typography
+            //component="h1"
+            variant="h8"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Popular Run: Central Park - 5 miles
+          </Typography>
         </Container>
         <GoogleMapReact
           bootstrapURLKeys={{

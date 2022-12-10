@@ -14,13 +14,11 @@ class GoogleMaps extends Component {
     };
   }
 
-
   render() {
     const apiIsLoaded = (map, maps) => {
       const directionsService = new window.google.maps.DirectionsService();
       const directionsRenderer = new window.google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      
 
       //origin is set to Vessel, 20 Hudson Yards, New York, NY 10001
       const origin = { lat: 40.754459, lng: -74.002129 };
@@ -57,15 +55,15 @@ class GoogleMaps extends Component {
     return (
       <div style={{ height: "87vh", width: "100%" }}>
         <Container maxWidth="40px">
-            <Typography
-              //component="h1"
-              variant="h8"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Popular Run: Hudson River Run - 1 mile
-            </Typography>
+          <Typography
+            //component="h1"
+            variant="h8"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Popular Run: Hudson River Run - 1 mile
+          </Typography>
         </Container>
         <GoogleMapReact
           bootstrapURLKeys={{
