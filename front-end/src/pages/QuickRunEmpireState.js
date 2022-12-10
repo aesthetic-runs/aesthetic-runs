@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-//import { GoogleMap, Marker, DirectionsRenderer } from "react-google-maps";
-//import { GoogleMapLoader, GoogleMap, Marker, DirectionsRenderer } from "react-google-maps";
 
 class GoogleMaps extends Component {
   constructor(props) {
@@ -36,7 +34,7 @@ class GoogleMaps extends Component {
         },
         {
           //The Museum at FIT, 227 W 27th St, New York, NY 10001
-          location: { lat: 40.746600, lng: -73.994193 },
+          location: { lat: 40.7466, lng: -73.994193 },
           stopover: true,
         },
       ];
@@ -62,7 +60,14 @@ class GoogleMaps extends Component {
     };
 
     return (
-      <div style={{ height: "93vh", width: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          height: "93vh",
+          width: "100%",
+        }}
+      >
         <GoogleMapReact
           bootstrapURLKeys={{
             key: process.env.REACT_APP_GOOGLE_MAPS,
@@ -73,13 +78,11 @@ class GoogleMaps extends Component {
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
         />
-        {/* <DirectionsRenderer
-          directions={{
-            origin: { lat: 40.738164, lng: -73.978216 } ,
-            destination:{ lat: 40.742213, lng: -73.989588 }
-          }}/> */}
+        <div style={{ width: "50vw" }}>
+          <p>Anime NYC</p>
+          <p>Anime NYC</p>
+        </div>
       </div>
-      
     );
   }
 }

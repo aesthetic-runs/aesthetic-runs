@@ -30,7 +30,7 @@ class GoogleMaps extends Component {
       ];
 
       //destination is set to to Strawberry Fields, New York, NY 10023
-      const destination = { lat: 40.775967, lng: -73.974740 };
+      const destination = { lat: 40.775967, lng: -73.97474 };
 
       directionsService.route(
         {
