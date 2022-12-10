@@ -19,6 +19,8 @@ import PopularRunCentralPark from "./pages/PopularRunCentralPark";
 import Registration from "./pages/Registration";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
+import Questionare from "./pages/Questionaire";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
@@ -54,6 +56,7 @@ export default function App() {
             element={<PopularRunCentralPark />}
           />
           <Route path="registration" element={<Registration />} />
+          <Route path="questionaire" element={<Questionare />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
