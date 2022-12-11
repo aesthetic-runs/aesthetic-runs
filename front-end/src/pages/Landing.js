@@ -1,23 +1,19 @@
 import React from "react";
 import Button from "@mui/material/Button";
-// import Card from "@mui/material/Card";
-// import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-// import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-// import Container from "@mui/material/Container";
 
 import { Link as RouterLink } from "react-router-dom";
-// import Link from "@mui/material/Link";
-// import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 function Landing() {
   return (
     <div
       style={{
-        width: "100%",
-        height: "94vh",
+        width: "100vw",
+        height: "100vh",
         backgroundImage: `url("https://wallpaperaccess.com/full/123346.jpg")`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
       }}
     >
       <Stack
