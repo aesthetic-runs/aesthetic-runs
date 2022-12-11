@@ -19,8 +19,8 @@ import PopularRunCentralPark from "./pages/PopularRunCentralPark";
 import Registration from "./pages/Registration";
 import NoPage from "./pages/NoPage";
 import reportWebVitals from "./reportWebVitals";
-import Questionare from "./pages/Questionaire";
-//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Questionare from "./pages/Questionnaire";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (

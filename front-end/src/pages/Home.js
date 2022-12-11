@@ -98,7 +98,7 @@ export default function Home() {
                 to="/Questionaire"
                 variant="contained"
               >
-                Take the questionare!
+                Take the questionaire!
               </Button>
             </Stack>
 
