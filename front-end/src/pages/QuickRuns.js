@@ -90,16 +90,16 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://i.imgur.com/Zu2TSlp.png"
+                  image="https://i.imgur.com/pQnM9hn.png" //lincoln center
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Empire State
+                    Lincoln Center
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRunEmpireState"
+                    to="/QuickRunLincolnCenter"
                     variant="contained"
                   >
                     Run the route!
@@ -125,16 +125,16 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://i.imgur.com/pQnM9hn.png"
+                  image="https://i.imgur.com/Zu2TSlp.png" //empire state
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Lincoln Center
+                    Empire State
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to="/QuickRunLincolnCenter"
+                    to="/QuickRunEmpireState"
                     variant="contained"
                   >
                     Run the route!
