@@ -60,19 +60,53 @@ const QuickRunEmpireState = () => {
   const steps = [
     {
       label: "Start at NYU College of Dentistry, 345 E 24th St.",
-      description: `Head northwest on E 24th St toward 2nd Ave and then turn right. `,
+      description: `Head northwest on E 24th St toward 2nd Ave `,
     },
     {
-      label: "Create an ad group",
-      description:
-        "An ad group contains one or more ads which target a shared set of keywords.",
+      label: "Turn right on Madison Ave and walk through Madison Square Park until exiting on 5th Ave",
     },
     {
-      label: "Create an ad",
-      description: `Try out different ad text to see what brings in the most customers,
-                and learn how to enhance your ads using features like ad extensions.
-                If you run into any problems with your ads, find out how to tell if
-                they're running and how to resolve approval issues.`,
+      label: `Walking north on Fifth Avenue until 34th street`,
+    },
+    {
+      label: "LANDMARK B: Empire State Building - 20 W 34th St., New York, NY 10001",
+      description: `Learn more about the Empire State Building: https://www.esbnyc.com/`,
+    },
+    {
+      label: `Turn right 34th street, walk a block, and turn left on Madison Ave`,
+    },
+    {
+      label: `Walk north on Madison Ave until between 36th and 37th Street`,
+    },
+    {
+      label: "LANDMARK C: The Morgan Library & Museum - 225 Madison Ave, New York, NY 10016",
+      description: `Learn more about The Morgan Library & Museum: https://www.themorgan.org/`,
+    },
+    {
+      label: `Walk back down (south) Madison Ave and turn right on 35th st`,
+    },
+    {
+      label: `Walk straight on 35th until 7th ave and turn left`,
+    },
+    {
+      label: `Walk south on 7th ave until 27th st`,
+    },
+    {
+      label: "LANDMARK D: The Museum at FIT - 227 W 27th St, New York, NY 10001",
+      description: `Learn more about The Museum at FIT: https://www.fitnyc.edu/museum/index.php`,
+    },
+    {
+      label: `Walk southwest and turn left on W 26th st`,
+    },
+    {
+      label: `Walk along 26th st and turn right onto Broadway`,
+    },
+    {
+      label: `Walk south along Broadway and turn right on Fifth ave until 23rd st`,
+    },
+    {
+      label: "LANDMARK E: Eataly NYC Flatiron - 200 5th Ave, New York, NY 10010",
+      description: `Learn more about Eataly NYC: https://www.eataly.com/us_en/`,
     },
   ];
 
@@ -114,7 +148,7 @@ const QuickRunEmpireState = () => {
             <Step key={step.label}>
               <StepLabel
                 optional={
-                  index === 2 ? (
+                  index === 14 ? (
                     <Typography variant="caption">Last step</Typography>
                   ) : null
                 }
@@ -154,91 +188,8 @@ const QuickRunEmpireState = () => {
           </Paper>
         )}
       </Box>
-      {/* <div style={{ width: "50vw" }}>
-        <p>Quick Run Empire State Building Route - 2 miles!</p>
-        <p>
-          Origin (A): NYU College of Dentistry, 345 E 24th St, New York, NY
-          10010
-        </p>
-        <p>Directions: </p>
-        <p>Head northwest on E 24th St toward 2nd Ave - 0.6 mi</p>
-        <p>Turn right -318 ft</p>
-        <p>Turn left toward E 26th St/Madison Square N - 56 ft</p>
-        <p>Turn right toward E 26th St/Madison Square N - 33 ft</p>
-        <p>Turn right toward E 26th St/Madison Square N - 30 ft</p>
-        <p>Turn left toward E 26th St/Madison Square N - 269 ft</p>
-        <p>Turn left onto E 26th St/Madison Square N - 46 ft</p>
-        <p>Turn right onto 5th Ave - 0.4 mi </p>
-
-        <p>
-          *Landmark B: Empire State Building, 20 W 34th St., New York, NY 10001
-        </p>
-        <p>Head northeast on 5th Ave toward W 34th St. - 154 ft</p>
-        <p>Turn right onto E 34th St - 0.1 mi</p>
-        <p>Turn left onto Madison Ave - 0.1 mi</p>
-        <p>Turn right - 66 ft</p>
-        <p>Walk for 59 ft</p>
-
-        <p>
-          *Landmark C: The Morgan Library & Museum, 225 Madison Ave, New York,
-          NY 10016
-        </p>
-        <p>Walk for 59 ft</p>
-        <p>Head northwest toward Madison Ave - 66 ft</p>
-        <p>Turn left onto Madison Ave - 384 ft</p>
-        <p>Turn right onto E 35th St - 0.5 mi</p>
-        <p>Turn left onto 7th Ave/Fashion Ave - 0.4 mi</p>
-
-        <p>*Landmark D: The Museum at FIT, 227 W 27th St, New York, NY 10001</p>
-        <p>Head southwest on 7th Ave toward W 26th St - 180 ft</p>
-        <p>Turn left onto W 26th St - 0.3 mi</p>
-        <p>Turn right onto Broadway - 0.1 mi</p>
-        <p>Turn right onto 5th Ave - 164 ft</p>
-
-        <p>
-          Destination (Landmark E): Eataly NYC Flatiron, 200 5th Ave, New York,
-          NY 10010
-        </p>
-      </div> */}
     </div>
   );
 };
 
 export default QuickRunEmpireState;
-
-//         <div style={{ width: "50vw" }}>
-//           <p>Quick Run Empire State Building Route - 2 miles!</p>
-//           <p>Origin (A): NYU College of Dentistry, 345 E 24th St, New York, NY 10010</p>
-//           <p>Directions: </p>
-//           <p>Head northwest on E 24th St toward 2nd Ave - 0.6 mi</p>
-//           <p>Turn right -318 ft</p>
-//           <p>Turn left toward E 26th St/Madison Square N - 56 ft</p>
-//           <p>Turn right toward E 26th St/Madison Square N - 33 ft</p>
-//           <p>Turn right toward E 26th St/Madison Square N - 30 ft</p>
-//           <p>Turn left toward E 26th St/Madison Square N - 269 ft</p>
-//           <p>Turn left onto E 26th St/Madison Square N - 46 ft</p>
-//           <p>Turn right onto 5th Ave - 0.4 mi </p>
-
-//           <p>*Landmark B: Empire State Building, 20 W 34th St., New York, NY 10001</p>
-//           <p>Head northeast on 5th Ave toward W 34th St. - 154 ft</p>
-//           <p>Turn right onto E 34th St - 0.1 mi</p>
-//           <p>Turn left onto Madison Ave - 0.1 mi</p>
-//           <p>Turn right - 66 ft</p>
-//           <p>Walk for 59 ft</p>
-
-//           <p>*Landmark C: The Morgan Library & Museum, 225 Madison Ave, New York, NY 10016</p>
-//           <p>Walk for 59 ft</p>
-//           <p>Head northwest toward Madison Ave - 66 ft</p>
-//           <p>Turn left onto Madison Ave - 384 ft</p>
-//           <p>Turn right onto E 35th St - 0.5 mi</p>
-//           <p>Turn left onto 7th Ave/Fashion Ave - 0.4 mi</p>
-
-//           <p>*Landmark D: The Museum at FIT, 227 W 27th St, New York, NY 10001</p>
-//           <p>Head southwest on 7th Ave toward W 26th St - 180 ft</p>
-//           <p>Turn left onto W 26th St - 0.3 mi</p>
-//           <p>Turn right onto Broadway - 0.1 mi</p>
-//           <p>Turn right onto 5th Ave - 164 ft</p>
-
-//           <p>Destination (Landmark E): Eataly NYC Flatiron, 200 5th Ave, New York, NY 10010</p>
-
-// export default GoogleMaps;
