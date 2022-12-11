@@ -26,7 +26,7 @@ const PopularRunCentralPark = () => {
         stopover: true,
       },
       {
-        //Glen Span Arch
+        //Glen Span Arch, W 102nd St, New York, NY 10025
         location: { lat: 40.79508, lng: -73.959318 },
         stopover: true,
       },
@@ -85,32 +85,84 @@ const PopularRunCentralPark = () => {
   const steps = [
     {
       label: "Start at Central Park North (110 St)",
-      description: `xx`,
+      description: `Head southeast on Central Park N toward Lenox Ave/Malcolm X Blvd`,
     },
     {
       label: "LANDMARK B: North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025",
       //description: `Learn more about Chelsea Piers`,
     },
     {
-      label: `LANDMARK C: Glen Span Arch`,
+      label: `Turn right onto Malcolm X Blvd then take a slight left onto Loch Walking Path`,
+    },
+    {
+      label: `Head southwest on Loch Walking Path`,
+    },
+    {
+      label: `LANDMARK C: Glen Span Arch, W 102nd St, New York, NY 10025`,
+    },
+    {
+      label: `Continue to follow the Loch Walking Path and turn left onto Central Park West`,
+    },
+    {
+      label: `Head southwest on Central Park West toward W 101st St`,
+    },
+    {
+      label: `Turn left at W 96th St and then turn right onto Shuman Running Track`,
     },
     {
       label: `LANDMARK D: Jacqueline Kennedy Onassis Reservoir, New York, NY 10128`,
+      description: "Head west on Shuman Running Track",
+    },
+    {
+      label: `Turn right toward Bridle Path then immediately turn left onto the Bridle Path`,
+    },
+    {
+      label: `Merge into 86th St Transverse and then turn right on 84th St`,
+    },
+    {
+      label: `Continue south 84th St and turn right onto 5th Ave/Museum Mile`,
     },
     {
       label: `LANDMARK E: The Metropolitan Museum of Art, 1000 5th Ave, New York, NY 10028h`,
+      description: "Head southwest on 5th Ave/Museum Mile toward E 82nd St",
+    },
+    {
+      label: `Turn left towards and onto Great Lawn Oval`,
+    },
+    {
+      label: `Turn right at Bridle Path, then turn left onto Central Park West`,
     },
     {
       label: `LANDMARK F: American Museum of Natural History, 200 Central Park West, New York, NY 10024`,
+      description: "Head southwest on Central Park West toward W 77th St",
+    },
+    {
+      label: `Turn left onto W 77th St, then turn right towards Oak Bridge`,
+    },
+    {
+      label: `Turn right toward Bow Bridge and continue onto Bow Bridge`,
     },
     {
       label: `LANDMARK G: Bethesda Fountain, New York, NY 10024`,
+      description: "Head south toward The Mall",
+    },
+    {
+      label: `Turn right onto The Mall and follow on the Nell Singer Lilac Walk`,
     },
     {
       label: `LANDMARK H: Sheep Meadow, 1802 65th Street Transverse, New York, NY 10065`,
     },
     {
+      label: `Head south on Nell Singer Lilac Walk and turn right toward Center Drive`,
+    },
+    {
+      label: `Turn left onto Center Drive then turn left onto W 59th St/Central Park S`,
+    },
+    {
       label: `LANDMARK I: Wollman Rink, Central Park S, New York, NY 10019`,
+    },
+    {
+      label: `Head northwest on W 59th St/Central Park S then take the crosswalk`,
     },
     {
       label: `LANDMARK J: Columbus Circle, 848 Columbus Cir, New York, NY 10019`,
@@ -155,7 +207,7 @@ const PopularRunCentralPark = () => {
             <Step key={step.label}>
               <StepLabel
                 optional={
-                  index === 5 ? (
+                  index === 25 ? (
                     <Typography variant="caption">Last step</Typography>
                   ) : null
                 }

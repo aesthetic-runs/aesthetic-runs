@@ -14,7 +14,7 @@ lat: 40.752094, lng: -73.975402 //Chrysler Building, 405 Lexington Ave, New York
 //Popular Run Central Park Route - 5 miles
 lat: 40.799390, lng: -73.952404 //Central Park North (110 St)
 lat: 40.797650, lng: -73.956022 //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
-lat: 40.795080, lng: -73.959318 //Glen Span Arch
+lat: 40.795080, lng: -73.959318 //Glen Span Arch, W 102nd St, New York, NY 10025
 lat: 40.787578, lng: -73.962631 //Jacqueline Kennedy Onassis Reservoir, New York, NY 10128
 lat: 40.781274, lng: -73.962803 //The Metropolitan Museum of Art, 1000 5th Ave, New York, NY 10028
 lat: 40.783029, lng: -73.974219 //American Museum of Natural History, 200 Central Park West, New York, NY 10024
