@@ -17,7 +17,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-// const navItems = ["Home", "Map"];
 
 function NavBar(props) {
   const { window } = props;
@@ -42,6 +41,11 @@ function NavBar(props) {
         <ListItem>
           <ListItemButton component={Link} to="/Map">
             <ListItemText>Map</ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component={Link} to="/QuickRuns">
+            <ListItemText>QuickRuns</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem>
