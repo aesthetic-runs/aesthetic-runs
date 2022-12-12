@@ -59,7 +59,8 @@ const QuickRunStatueLiberty = () => {
 
   const steps = [
     {
-      label: "Start at Washington Square Park, Washington Square, New York, NY 10012",
+      label:
+        "Start at Washington Square Park, Washington Square, New York, NY 10012",
       description: `Head southwest on Sullivan St toward W 3rd St`,
     },
     {

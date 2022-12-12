@@ -63,13 +63,15 @@ const QuickRunEmpireState = () => {
       description: `Head northwest on E 24th St toward 2nd Ave `,
     },
     {
-      label: "Turn right on Madison Ave and walk through Madison Square Park until exiting on 5th Ave",
+      label:
+        "Turn right on Madison Ave and walk through Madison Square Park until exiting on 5th Ave",
     },
     {
       label: `Walking north on Fifth Avenue until 34th street`,
     },
     {
-      label: "LANDMARK B: Empire State Building - 20 W 34th St., New York, NY 10001",
+      label:
+        "LANDMARK B: Empire State Building - 20 W 34th St., New York, NY 10001",
       description: `Learn more about the Empire State Building: https://www.esbnyc.com/`,
     },
     {
@@ -79,7 +81,8 @@ const QuickRunEmpireState = () => {
       label: `Walk north on Madison Ave until between 36th and 37th Street`,
     },
     {
-      label: "LANDMARK C: The Morgan Library & Museum - 225 Madison Ave, New York, NY 10016",
+      label:
+        "LANDMARK C: The Morgan Library & Museum - 225 Madison Ave, New York, NY 10016",
       description: `Learn more about The Morgan Library & Museum: https://www.themorgan.org/`,
     },
     {
@@ -92,7 +95,8 @@ const QuickRunEmpireState = () => {
       label: `Walk south on 7th ave until 27th st`,
     },
     {
-      label: "LANDMARK D: The Museum at FIT - 227 W 27th St, New York, NY 10001",
+      label:
+        "LANDMARK D: The Museum at FIT - 227 W 27th St, New York, NY 10001",
       description: `Learn more about The Museum at FIT: https://www.fitnyc.edu/museum/index.php`,
     },
     {
@@ -105,7 +109,8 @@ const QuickRunEmpireState = () => {
       label: `Walk south along Broadway and turn right on Fifth ave until 23rd st`,
     },
     {
-      label: "LANDMARK E: Eataly NYC Flatiron - 200 5th Ave, New York, NY 10010",
+      label:
+        "LANDMARK E: Eataly NYC Flatiron - 200 5th Ave, New York, NY 10010",
       description: `Learn more about Eataly NYC: https://www.eataly.com/us_en/`,
     },
   ];

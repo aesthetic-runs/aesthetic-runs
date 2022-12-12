@@ -155,8 +155,6 @@ const PopularRunHudsonRiver = () => {
 
 export default PopularRunHudsonRiver;
 
-
-
 //old code but had top container label on it
 // import React, { Component } from "react";
 // import GoogleMapReact from "google-map-react";
@@ -243,4 +241,3 @@ export default PopularRunHudsonRiver;
 // }
 
 // export default GoogleMaps;
-

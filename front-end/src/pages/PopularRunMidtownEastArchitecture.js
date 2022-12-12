@@ -64,29 +64,34 @@ const PopularRunMidtownEastArchitecture = () => {
 
   const steps = [
     {
-      label: "Start at Grand Central Terminal, 89 E 42nd St, New York, NY 10017",
+      label:
+        "Start at Grand Central Terminal, 89 E 42nd St, New York, NY 10017",
       description: `Head north on Vanderbilt Ave`,
     },
     {
       label: "Walk up north on Vanderbilt Ave and turn left on 47th St",
     },
     {
-      label: "Walk along 47th St, turn right on 5th Ave, and walk up north until 52nd St",
+      label:
+        "Walk along 47th St, turn right on 5th Ave, and walk up north until 52nd St",
     },
     {
       label: "LANDMARK B: St. Patrick's Cathedral, 5th Ave, New York, NY 10022",
     },
     {
-      label: "Walk up north on 5th Ave, turn left onto 55th St, and walk straight",
+      label:
+        "Walk up north on 5th Ave, turn left onto 55th St, and walk straight",
     },
     {
       label: `LANDMARK C: The Museum of Modern Art, 11 W 53rd St, New York, NY 10019`,
     },
     {
-      label: "Walk up out along 55th St, turn left on 6th Ave, and walk south until 52nd St",
+      label:
+        "Walk up out along 55th St, turn left on 6th Ave, and walk south until 52nd St",
     },
     {
-      label: "LANDMARK D: Radio City Music Hall, 1260 6th Ave, New York, NY 10020",
+      label:
+        "LANDMARK D: Radio City Music Hall, 1260 6th Ave, New York, NY 10020",
     },
     {
       label: "Walk east along 52nd St and turn right on Madison Ave",
@@ -98,7 +103,8 @@ const PopularRunMidtownEastArchitecture = () => {
       label: `LANDMARK E: SUMMIT One Vanderbilt, 45 E 42nd St, New York, NY 10017`,
     },
     {
-      label: "Walk eastwards on 43rd St until crossing the street and reaching the corner of Lexington Ave",
+      label:
+        "Walk eastwards on 43rd St until crossing the street and reaching the corner of Lexington Ave",
     },
     {
       label: `LANDMARK F: Chrysler Building, 405 Lexington Ave, New York, NY 10174`,
@@ -189,8 +195,6 @@ const PopularRunMidtownEastArchitecture = () => {
 };
 
 export default PopularRunMidtownEastArchitecture;
-
-
 
 //old code
 // import React, { Component } from "react";
@@ -293,4 +297,3 @@ export default PopularRunMidtownEastArchitecture;
 // }
 
 // export default GoogleMaps;
-

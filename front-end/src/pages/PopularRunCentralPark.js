@@ -88,7 +88,8 @@ const PopularRunCentralPark = () => {
       description: `Head southeast on Central Park N toward Lenox Ave/Malcolm X Blvd`,
     },
     {
-      label: "LANDMARK B: North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025",
+      label:
+        "LANDMARK B: North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025",
       //description: `Learn more about Chelsea Piers`,
     },
     {
@@ -253,7 +254,6 @@ const PopularRunCentralPark = () => {
 };
 
 export default PopularRunCentralPark;
-
 
 // import React, { Component } from "react";
 // import GoogleMapReact from "google-map-react";

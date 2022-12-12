@@ -59,7 +59,8 @@ const QuickRunLincolnCenter = () => {
       label: "Continue on 62nd st and turn right onto Lincoln Center Plaza",
     },
     {
-      label: "LANDMARK B: Lincoln Center for the Performing Arts - Lincoln Center Plaza, New York, NY 10023",
+      label:
+        "LANDMARK B: Lincoln Center for the Performing Arts - Lincoln Center Plaza, New York, NY 10023",
     },
     {
       label: `Exit and head northeast on Lincoln Center Plaza and turn right on W 65th st`,
