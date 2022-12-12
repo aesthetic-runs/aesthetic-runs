@@ -70,17 +70,16 @@ function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          
+
           <Button component={Link} to="/" sx={{ color: "#fff" }}>
-              Aesthetic Runs
+            Aesthetic Runs
           </Button>
 
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-          </Typography>
+          ></Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button component={Link} to="/Home" sx={{ color: "#fff" }}>
