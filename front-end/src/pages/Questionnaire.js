@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/Questionaire.css";
 import { useNavigate } from "react-router-dom";
 
 const Questionnaire = () => {
@@ -76,10 +77,29 @@ const Questionnaire = () => {
     ) {
       navigate("/PopularRunCentralPark");
     }
+    if (
+      (answers.length === 3 &&
+        answers.includes("1 Mile") &&
+        answers.includes("Museum")) ||
+      (answers.length === 3 &&
+        answers.includes("2 Miles") &&
+        answers.includes("Park")) ||
+      (answers.length === 3 &&
+        answers.includes("5 Miles") &&
+        answers.includes("Museum"))
+    ) {
+      alert("No Route Available");
+      navigate("/Home");
+    }
   }, [answers]);
 
+  const goToPrevious = (e) => {
+    setCurrentQuestion(currentQuestion - 1);
+    setAnswers(answers.slice(0, -1));
+  };
+
   return (
-    <div>
+    <div className="question-wrapper">
       <h2>{questions[currentQuestion].question}</h2>
       <select onInput={(e) => handleAnswer(e)}>
         <option defaultValue="selected" defaultChecked>
@@ -93,6 +113,7 @@ const Questionnaire = () => {
           );
         })}
       </select>
+      <button onClick={goToPrevious}>Back</button>
     </div>
   );
 };
