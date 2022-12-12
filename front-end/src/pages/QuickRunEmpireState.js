@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
 const QuickRunEmpireState = () => {
+  const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
     const directionsService = new window.google.maps.DirectionsService();
     const directionsRenderer = new window.google.maps.DirectionsRenderer();
@@ -63,13 +64,15 @@ const QuickRunEmpireState = () => {
       description: `Head northwest on E 24th St toward 2nd Ave `,
     },
     {
-      label: "Turn right on Madison Ave and walk through Madison Square Park until exiting on 5th Ave",
+      label:
+        "Turn right on Madison Ave and walk through Madison Square Park until exiting on 5th Ave",
     },
     {
       label: `Walking north on Fifth Avenue until 34th street`,
     },
     {
-      label: "LANDMARK B: Empire State Building - 20 W 34th St., New York, NY 10001",
+      label:
+        "LANDMARK B: Empire State Building - 20 W 34th St., New York, NY 10001",
       description: `Learn more about the Empire State Building: https://www.esbnyc.com/`,
     },
     {
@@ -79,7 +82,8 @@ const QuickRunEmpireState = () => {
       label: `Walk north on Madison Ave until between 36th and 37th Street`,
     },
     {
-      label: "LANDMARK C: The Morgan Library & Museum - 225 Madison Ave, New York, NY 10016",
+      label:
+        "LANDMARK C: The Morgan Library & Museum - 225 Madison Ave, New York, NY 10016",
       description: `Learn more about The Morgan Library & Museum: https://www.themorgan.org/`,
     },
     {
@@ -92,7 +96,8 @@ const QuickRunEmpireState = () => {
       label: `Walk south on 7th ave until 27th st`,
     },
     {
-      label: "LANDMARK D: The Museum at FIT - 227 W 27th St, New York, NY 10001",
+      label:
+        "LANDMARK D: The Museum at FIT - 227 W 27th St, New York, NY 10001",
       description: `Learn more about The Museum at FIT: https://www.fitnyc.edu/museum/index.php`,
     },
     {
@@ -105,15 +110,21 @@ const QuickRunEmpireState = () => {
       label: `Walk south along Broadway and turn right on Fifth ave until 23rd st`,
     },
     {
-      label: "LANDMARK E: Eataly NYC Flatiron - 200 5th Ave, New York, NY 10010",
+      label:
+        "LANDMARK E: Eataly NYC Flatiron - 200 5th Ave, New York, NY 10010",
       description: `Learn more about Eataly NYC: https://www.eataly.com/us_en/`,
     },
   ];
 
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = (index) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (index === steps.length - 1) {
+      isLastStep.current = true;
+    } else {
+      isLastStep.current = false;
+    }
   };
 
   const handleBack = () => {
@@ -161,7 +172,7 @@ const QuickRunEmpireState = () => {
                   <div>
                     <Button
                       variant="contained"
-                      onClick={handleNext}
+                      onClick={(e) => handleNext(index)}
                       sx={{ mt: 1, mr: 1 }}
                     >
                       {index === steps.length - 1 ? "Finish" : "Continue"}
@@ -186,6 +197,11 @@ const QuickRunEmpireState = () => {
             <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
               Reset
             </Button>
+            {isLastStep.current && (
+              <Button href="/home" sx={{ mt: 1, mr: 1 }}>
+                Home
+              </Button>
+            )}
           </Paper>
         )}
       </Box>
