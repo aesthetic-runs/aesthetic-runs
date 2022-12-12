@@ -94,8 +94,12 @@ const Questionnaire = () => {
   }, [answers]);
 
   const goToPrevious = (e) => {
-    setCurrentQuestion(currentQuestion - 1);
-    setAnswers(answers.slice(0, -1));
+    if (currentQuestion === 0) {
+      setCurrentQuestion(0);
+    } else {
+      setCurrentQuestion(currentQuestion - 1);
+      setAnswers(answers.slice(0, -1));
+    }
   };
 
   return (
@@ -113,7 +117,9 @@ const Questionnaire = () => {
           );
         })}
       </select>
-      <button onClick={goToPrevious}>Back</button>
+      <button className="back-btn" onClick={goToPrevious}>
+        Back
+      </button>
     </div>
   );
 };
