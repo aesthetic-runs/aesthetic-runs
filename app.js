@@ -127,14 +127,14 @@ app.post("/login", (request, response) => {
 // bcrypt.hash(request.body.password, 10).then().catch();
 
 // free endpoint
-app.get("/free-endpoint", (request, response) => {
-  response.json({ message: "You are free to access me anytime." });
-});
+// app.get("/free-endpoint", (request, response) => {
+//   response.json({ message: "You are free to access me anytime." });
+// });
 
 // authentication endpoint
-app.get("/auth-endpoint", auth, (request, response) => {
-  response.json({ message: "You are authorized to access me." });
-});
+// app.get("/auth-endpoint", auth, (request, response) => {
+//   response.json({ message: "You are authorized to access me." });
+// });
 
 // module.exports = app;
 app.listen(8000, () => console.log("Server is up!")); // Local
