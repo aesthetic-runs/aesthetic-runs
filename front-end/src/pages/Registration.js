@@ -82,7 +82,7 @@ export default function SignUp() {
       alert("Please enter a valid email address.");
     } else if (!isValidPass(password)) {
       alert(
-        "Password must have at least 1 uppercase letter, 1 number, and 1 symbol."
+        "Password must be at least 8 characters long and have at least 1 uppercase letter, 1 number, and 1 symbol."
       );
     } else {
       // set configurations
