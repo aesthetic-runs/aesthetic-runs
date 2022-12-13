@@ -104,7 +104,8 @@ export default function SignUp() {
           navigate("/Login");
         })
         .catch((error) => {
-          error = new Error();
+          let error_message = error.response.data.message;
+          alert(error_message);
         });
     }
   };

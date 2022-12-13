@@ -55,7 +55,7 @@ app.post("/registration", (request, response) => {
         // catch error if the new user wasn't added successfully to the database
         .catch((error) => {
           response.status(500).send({
-            message: "Error creating user",
+            message: "Error creating user, maybe email already exists?",
             error,
           });
         });

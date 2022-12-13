@@ -78,13 +78,13 @@ export default function Login() {
         localStorage.setItem("token", token);
         setAuthToken(token);
         alert("Success! You are now logged in.");
-        navigate("/QuickRuns");
+        navigate("/Home");
       })
       .catch((error) => {
         let error_message = error.response.data.message;
         alert(error_message);
       });
-  };
+  }
 
   return (
     <ThemeProvider theme={theme}>
