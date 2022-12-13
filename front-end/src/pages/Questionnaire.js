@@ -100,7 +100,10 @@ const Questionnaire = () => {
   const goToPrevious = (e) => {
     if (currentQuestion === 0) {
       setCurrentQuestion(0);
-    } else {
+    } else if (currentQuestion === 1) {
+      window.location.reload(false);
+    }
+    else {
       setCurrentQuestion(currentQuestion - 1);
       setAnswers(answers.slice(0, -1));
     }
