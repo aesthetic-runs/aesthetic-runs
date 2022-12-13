@@ -17,7 +17,7 @@ function Landing() {
       }}
     >
       <Stack
-        sx={{ pt: 20 }}
+        sx={{ pt: "35vh" }}
         direction="row"
         spacing={2}
         justifyContent="center"
