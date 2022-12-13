@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 const Questionnaire = () => {
   const navigate = useNavigate();
-  const [questions, setQuestions] = useState([
+  const [questions] = useState([
     {
       question: "Which city are you in?",
       options: ["New York"],
     },
     {
-      question: "How long would you like to run for",
+      question: "How far would you like to run?",
       options: ["1 Mile", "2 Miles", "5 Miles"],
     },
     {
@@ -21,11 +21,8 @@ const Questionnaire = () => {
   const [answers, setAnswers] = useState([]);
 
   const handleAnswer = (e) => {
-    console.log(e.target.value);
-    // console.log(questions[currentQuestion]);
-    // if (e.target.value === questions[currentQuestion].correct) {
-    //   setScore(score + 1);
-    // }
+    // console.log(e.target.value);
+
     if (e.target.value !== "Please select") {
       setAnswers([...answers, e.target.value]);
     }
@@ -38,7 +35,7 @@ const Questionnaire = () => {
   };
 
   useEffect(() => {
-    console.log(answers);
+    // console.log(answers);
     if (
       answers.length === 3 &&
       answers.includes("1 Mile") &&
