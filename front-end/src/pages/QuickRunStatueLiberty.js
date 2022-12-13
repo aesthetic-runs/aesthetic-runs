@@ -23,7 +23,7 @@ const QuickRunStatueLiberty = () => {
     directionsRenderer.setMap(map);
 
     const image1 =
-      "https://untappedcities.com/wp-content/uploads/2015/05/Washington-Square-Park-NYC-Untapped-Cities-jinwoo-chong-02.jpg";
+      "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.730827, lng: -73.997214 },
       map,
