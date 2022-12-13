@@ -24,7 +24,7 @@ const PopularRunHudsonRiver = () => {
     directionsRenderer.setMap(map);
 
     const image1 =
-      "https://image.newyorkcity.ca/wp-content/uploads/2018/01/Hudson-Yards-Vessel-in-New-York.jpg.webp";
+      "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.754459, lng: -74.002129 },
       map,

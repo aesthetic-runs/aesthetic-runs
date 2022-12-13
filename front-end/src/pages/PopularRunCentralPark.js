@@ -24,7 +24,7 @@ const PopularRunCentralPark = () => {
     directionsRenderer.setMap(map);
 
     const image1 =
-      "https://static01.nyt.com/images/2017/11/05/travel/05NEVER/21-hours-overview-articleLarge.jpg?quality=75&auto=webp&disable=upscale";
+      "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.79939, lng: -73.952404 },
       map,

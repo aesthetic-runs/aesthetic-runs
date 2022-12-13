@@ -24,7 +24,7 @@ const QuickRunEmpireState = () => {
     directionsRenderer.setMap(map);
 
     const image1 =
-      "https://aquadentalboynton.com/wp-content/uploads/2018/01/nyu-dentistry-large.png";
+      "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.738164, lng: -73.978216 },
       map,
