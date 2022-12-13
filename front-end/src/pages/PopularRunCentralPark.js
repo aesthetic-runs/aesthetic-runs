@@ -12,9 +12,135 @@ import Typography from "@mui/material/Typography";
 const PopularRunCentralPark = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
+
+    var rendererOptions = {
+      map: map,
+      suppressMarkers: true
+    }
+
     const directionsService = new window.google.maps.DirectionsService();
     const directionsRenderer = new window.google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
+
+    const image1 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker1 = new window.google.maps.Marker({
+      position: { lat: 40.79939, lng: -73.952404 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image1
+    },
+    }); //Central Park North (110 St)
+
+    const image2 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker2 = new window.google.maps.Marker({
+      position: { lat: 40.79765, lng: -73.956022 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image2
+    },
+    }); //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
+
+    const image3 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker3 = new window.google.maps.Marker({
+      position: { lat: 40.79508, lng: -73.959318 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image3
+    },
+    }); //Glen Span Arch, W 102nd St, New York, NY 10025
+
+    const image4 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker4 = new window.google.maps.Marker({
+      position: { lat: 40.787578, lng: -73.962631 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image4
+    },
+    }); //Jacqueline Kennedy Onassis Reservoir, New York, NY 10128
+
+    const image5 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker5 = new window.google.maps.Marker({
+      position: { lat: 40.781274, lng: -73.962803 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image5
+    },
+    }); //The Metropolitan Museum of Art, 1000 5th Ave, New York, NY 10028
+
+    const image6 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker6 = new window.google.maps.Marker({
+      position: { lat: 40.783029, lng: -73.974219 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image6
+    },
+    }); //American Museum of Natural History, 200 Central Park West, New York, NY 10024
+
+    const image7 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker7 = new window.google.maps.Marker({
+      position: { lat: 40.775945, lng: -73.970957 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image7
+    },
+    }); //Bethesda Fountain, New York, NY 10024
+
+    const image8 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker8 = new window.google.maps.Marker({
+      position: { lat: 40.771785, lng: -73.974819 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image8
+    },
+    }); //Sheep Meadow, 1802 65th Street Transverse, New York, NY 10065
+
+    const image9 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker9 = new window.google.maps.Marker({
+      position: { lat: 40.76873, lng: -73.974476 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image9
+    },
+    }); //Wollman Rink, Central Park S, New York, NY 10019
+
+    const image10 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker10 = new window.google.maps.Marker({
+      position: { lat: 40.769055, lng: -73.981686 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image10
+    },
+    }); //Columbus Circle, 848 Columbus Cir, New York, NY 10019
 
     //origin is set to Central Park North (110 St)
     const origin = { lat: 40.79939, lng: -73.952404 };

@@ -12,9 +12,75 @@ import Typography from "@mui/material/Typography";
 const QuickRunEmpireState = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
+
+    var rendererOptions = {
+      map: map,
+      suppressMarkers: true
+    }
+
     const directionsService = new window.google.maps.DirectionsService();
-    const directionsRenderer = new window.google.maps.DirectionsRenderer();
+    const directionsRenderer = new window.google.maps.DirectionsRenderer(rendererOptions);
     directionsRenderer.setMap(map);
+
+    const image1 = "https://aquadentalboynton.com/wp-content/uploads/2018/01/nyu-dentistry-large.png";
+    const beachMarker1 = new window.google.maps.Marker({
+      position: { lat: 40.738164, lng: -73.978216 },
+      map,
+      title: "NYU College of Dentistry: The New York University College of Dentistry is the dentistry school of New York University. As the 3rd oldest dentistry school in the United States, it offers both graduate programs and clinical training in oral healthcare.",
+      icon: {
+        size: new window.google.maps.Size(90, 35),
+        scaledSize: new window.google.maps.Size(90, 35),
+        url: image1 
+    },
+    }); //NYU CDentistry
+
+    const image2 = "https://www.themorgan.org/sites/default/files/images/about/Library-Ceiling-1.jpg";
+    const beachMarker2 = new window.google.maps.Marker({
+      position: { lat: 40.749226, lng: -73.981397 },
+      map,
+      title: "Morgan Library & Museum: The Morgan Library & Museum, formerly the Pierpont Morgan Library, is a museum and research library in the Murray Hill neighborhood of Manhattan in New York City.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image2
+    },
+    }); //Morgan Library & Museum
+
+    const image3 = "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0d/9a/a1.jpg";
+    const beachMarker3 = new window.google.maps.Marker({
+      position: { lat: 40.748817, lng: -73.985428 },
+      map,
+      title: "Empire State Building: The Empire State Building is a 102-story Art Deco skyscraper in Midtown Manhattan, New York City. The building was designed by Shreve, Lamb & Harmon and built from 1930 to 1931. Its name is derived from 'Empire State', the nickname of the state of New York.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image3
+    },
+    }); //Empire State Building
+
+    const image4 = "https://www.fitnyc.edu/images/cer/master-brand-button.jpg";
+    const beachMarker4 = new window.google.maps.Marker({
+      position: { lat: 40.7466, lng: -73.994193 },
+      map,
+      title: "Museum at FIT: Rotating exhibits & permanent collection of garments & accessories; free admission.",
+      icon: {
+        size: new window.google.maps.Size(35, 35),
+        scaledSize: new window.google.maps.Size(35, 35),
+        url: image4
+    },
+    }); //Museum @ FIT
+
+    const image5 = "https://www.eataly.com/wp/wp-content/uploads/2016/08/eataly-downtown.jpg";
+    const beachMarker5 = new window.google.maps.Marker({
+      position: { lat: 40.742213, lng: -73.989588 },
+      map,
+      title: "Eataly NYC Flatiron: Branch of the famed Italian market, offering counters, restaurants & cooking demos.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image5
+    },
+    }); //Eataly NYC Flatiron
 
     //origin is set to NYU College of Dentistry, 345 E 24th St, New York, NY 10010
     const origin = { lat: 40.738164, lng: -73.978216 };
