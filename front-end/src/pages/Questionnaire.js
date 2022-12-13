@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
-import "../styles/Questionaire.css";
 import { useNavigate } from "react-router-dom";
+
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import "../styles/Questionaire.css";
 
 const Questionnaire = () => {
   const navigate = useNavigate();
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState([]);
   const [questions] = useState([
     {
       question: "Which city are you in?",
@@ -18,8 +27,6 @@ const Questionnaire = () => {
       options: ["Park", "Museum", "Historical Building"],
     },
   ]);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState([]);
 
   const handleAnswer = (e) => {
     // console.log(e.target.value);
@@ -88,7 +95,7 @@ const Questionnaire = () => {
       alert("No Route Available");
       navigate("/Home");
     }
-  }, [answers]);
+  });
 
   const goToPrevious = (e) => {
     if (currentQuestion === 0) {
@@ -101,22 +108,32 @@ const Questionnaire = () => {
 
   return (
     <div className="question-wrapper">
-      <h2>{questions[currentQuestion].question}</h2>
-      <select onInput={(e) => handleAnswer(e)}>
-        <option defaultValue="selected" defaultChecked>
-          Please select
-        </option>
-        {questions[currentQuestion].options.map((option, key) => {
-          return (
-            <option key={key} value={option}>
-              {option}
-            </option>
-          );
-        })}
-      </select>
-      <button className="back-btn" onClick={goToPrevious}>
+      <Typography
+        variant="h2"
+        align="center"
+        color="text.primary"
+        sx={{ fontWeight: "bold" }}
+      >
+        {questions[currentQuestion].question}
+      </Typography>
+      <FormControl
+        sx={{ m: 1, minWidth: 160, marginTop: "2vh", marginBottom: "2vh" }}
+        size="small"
+      >
+        <InputLabel>Please select</InputLabel>
+        <Select label="Please select" onChange={(e) => handleAnswer(e)}>
+          {questions[currentQuestion].options.map((option, key) => {
+            return (
+              <MenuItem key={key} value={option}>
+                {option}
+              </MenuItem>
+            );
+          })}
+        </Select>
+      </FormControl>
+      <Button onClick={goToPrevious} variant="contained">
         Back
-      </button>
+      </Button>
     </div>
   );
 };

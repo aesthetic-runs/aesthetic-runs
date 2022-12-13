@@ -9,25 +9,3 @@
   background-position: center;
   background-size: cover;
 }
-
-h2 {
-  font-size: 40px;
-}
-
-select {
-  margin-bottom: 20px !important;
-}
-
-.back-btn {
-  color: rgba(0, 0, 0, 0.26);
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.75;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
-  min-width: 64px;
-  padding: 6px 8px;
-  border-radius: 4px;
-  background-color: transparent;
-  border: none;
-}
