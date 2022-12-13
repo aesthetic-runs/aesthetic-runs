@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -24,6 +24,12 @@ function NavBar(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.removeItem('token');
+    navigate("/");
   };
 
   const drawer = (
@@ -48,13 +54,18 @@ function NavBar(props) {
             <ListItemText>QuickRuns</ListItemText>
           </ListItemButton>
         </ListItem>
+        <ListItem>
+          <ListItemButton onClick={logout}>
+            <ListItemText>Log Out</ListItemText>
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
+    
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -89,6 +100,9 @@ function NavBar(props) {
             </Button>
             <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
               QuickRuns
+            </Button>
+            <Button onClick={logout} sx={{ color: "#fff" }}>
+              Log Out
             </Button>
           </Box>
         </Toolbar>
