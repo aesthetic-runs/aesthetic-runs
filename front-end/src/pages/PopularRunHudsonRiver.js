@@ -12,9 +12,51 @@ import Typography from "@mui/material/Typography";
 const PopularRunHudsonRiver = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
+
+    var rendererOptions = {
+      map: map,
+      suppressMarkers: true
+    }
+
     const directionsService = new window.google.maps.DirectionsService();
-    const directionsRenderer = new window.google.maps.DirectionsRenderer();
+    const directionsRenderer = new window.google.maps.DirectionsRenderer(rendererOptions);
     directionsRenderer.setMap(map);
+
+    const image1 = "https://image.newyorkcity.ca/wp-content/uploads/2018/01/Hudson-Yards-Vessel-in-New-York.jpg.webp";
+    const beachMarker1 = new window.google.maps.Marker({
+      position: { lat: 40.754459, lng: -74.002129 },
+      map,
+      title: "The Vessel: The Vessel is a structure and visitor attraction built as part of the Hudson Yards Redevelopment Project in Manhattan, New York City, New York. ",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image1
+    },
+    }); //The Vessel
+
+    const image2 = "https://media.chelseapiers.com/images/gc/2019/500x500/DSC_7685-500x500.jpg";
+    const beachMarker2 = new window.google.maps.Marker({
+      position: { lat: 40.748997, lng: -74.008566 },
+      map,
+      title: "Chelsea Piers: Chelsea Piers is a series of piers in Chelsea, on the West Side of Manhattan in New York City.",
+      icon: {
+        size: new window.google.maps.Size(35, 35),
+        scaledSize: new window.google.maps.Size(35, 35),
+        url: image2
+    },
+    }); //Chelsea Piers
+
+    const image3 = "http://cdn.cnn.com/cnnnext/dam/assets/210524225200-02-little-island-ny-0525.jpg";
+    const beachMarker3 = new window.google.maps.Marker({
+      position: { lat: 40.742104, lng: -74.010025 },
+      map,
+      title: "Little Island: Little Island at Pier 55 is an artificial island park in the Hudson River west of Manhattan in New York City, adjoining Hudson River Park. Designed by Heatherwick Studio, it is near the intersection of West Street and 13th Street in the Meatpacking District and Chelsea neighborhoods of Manhattan.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image3
+    },
+    }); //Little Island
 
     //origin is set to Vessel, 20 Hudson Yards, New York, NY 10001
     const origin = { lat: 40.754459, lng: -74.002129 };

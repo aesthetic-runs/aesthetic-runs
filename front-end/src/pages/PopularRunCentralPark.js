@@ -12,9 +12,135 @@ import Typography from "@mui/material/Typography";
 const PopularRunCentralPark = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
+
+    var rendererOptions = {
+      map: map,
+      suppressMarkers: true
+    }
+
     const directionsService = new window.google.maps.DirectionsService();
-    const directionsRenderer = new window.google.maps.DirectionsRenderer();
+    const directionsRenderer = new window.google.maps.DirectionsRenderer(rendererOptions);
     directionsRenderer.setMap(map);
+
+    const image1 = "https://static01.nyt.com/images/2017/11/05/travel/05NEVER/21-hours-overview-articleLarge.jpg?quality=75&auto=webp&disable=upscale";
+    const beachMarker1 = new window.google.maps.Marker({
+      position: { lat: 40.79939, lng: -73.952404 },
+      map,
+      title: "Central Park North (110 St): 110th Street is a street in the New York City borough of Manhattan. It is commonly known as the boundary between Harlem and Central Park, along which it is known as Central Park North.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image1
+    },
+    }); //Central Park North (110 St)
+
+    const image2 = "https://www.centralparktours.net/main-file/attractions_images/the-ravine-centralpark.jpg";
+    const beachMarker2 = new window.google.maps.Marker({
+      position: { lat: 40.79765, lng: -73.956022 },
+      map,
+      title: "North Woods Loch Waterfall: The Loch, known for its three waterfalls, is the long, narrow watercourse that flows through the Ravine in the North Woods.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image2
+    },
+    }); //North Woods Loch Waterfall, Central Park, Loch Walking Path, New York, NY 10025
+
+    const image3 = "https://michaelminn.net/newyork/parks/central-park/bridges/glen-span-arch/2007-08-02_18-45-20.jpg";
+    const beachMarker3 = new window.google.maps.Marker({
+      position: { lat: 40.79508, lng: -73.959318 },
+      map,
+      title: "Glen Span Arch: Glen Span Arch, carrying the West Drive across 102nd Street, serves as a gateway to the wooded and secluded Loch to the northeast.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image3
+    },
+    }); //Glen Span Arch, W 102nd St, New York, NY 10025
+
+    const image4 = "https://triptins.com/wp-content/uploads/2020/11/Jacqueline-Kennedy-Onassis-Reservoir-Loop.jpeg";
+    const beachMarker4 = new window.google.maps.Marker({
+      position: { lat: 40.787578, lng: -73.962631 },
+      map,
+      title: "Jacqueline Kennedy Onassis Reservoir: The Jacqueline Kennedy Onassis Reservoir, also known as Central Park Reservoir, is a decommissioned reservoir in Central Park in the borough of Manhattan, New York City, stretching from 86th to 96th Streets. It covers 106 acres and holds over 10⁹ US Gal. of water.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image4
+    },
+    }); //Jacqueline Kennedy Onassis Reservoir, New York, NY 10128
+
+    const image5 = "https://www.moma.org/assets/visit/entrance-image--museum-crop-7516b01003659172f2d9dbc7a6c2e9d9.jpg";
+    const beachMarker5 = new window.google.maps.Marker({
+      position: { lat: 40.781274, lng: -73.962803 },
+      map,
+      title: "Museum of Modern Art: Founded in 1929, The Museum of Modern Art (MoMA) in midtown Manhattan was the first museum devoted to the modern era.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image5
+    },
+    }); //The Metropolitan Museum of Art, 1000 5th Ave, New York, NY 10028
+
+    const image6 = "https://4.bp.blogspot.com/-BWm4Z_Awn14/WTHeMVnGbBI/AAAAAAAAGCc/dct9_tKbgKMQ85Tw_tAvHMPmzsIsfm94ACLcB/s1600/IMG_2412.JPG";
+    const beachMarker6 = new window.google.maps.Marker({
+      position: { lat: 40.783029, lng: -73.974219 },
+      map,
+      title: "American Museum of Natural History: The American Museum of Natural History is a natural history museum on the Upper West Side of Manhattan in New York City.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image6
+    },
+    }); //American Museum of Natural History, 200 Central Park West, New York, NY 10024
+
+    const image7 = "https://aqueduct.org/sites/aqueduct.org/files/bethesda-fountain.jpg";
+    const beachMarker7 = new window.google.maps.Marker({
+      position: { lat: 40.775945, lng: -73.970957 },
+      map,
+      title: "Bethesda Fountain: Bethesda Terrace and Fountain are two architectural features overlooking the southern shore of the Lake in New York City's Central Park. The fountain, with its Angel of the Waters statue, is located in the center of the terrace.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image7
+    },
+    }); //Bethesda Fountain, New York, NY 10024
+
+    const image8 = "https://www.centralpark.com/downloads/3663/download/the-sheep-are-back-in-the-meadow.jpe?cb=783665e2e86dabe11fdbe675f24e26c4&w=1200";
+    const beachMarker8 = new window.google.maps.Marker({
+      position: { lat: 40.771785, lng: -73.974819 },
+      map,
+      title: "Sheep Meadow: Sheep Meadow is a 15-acre meadow near the southwestern section of Central Park, between West 66th and 69th Streets in Manhattan, New York City. It is adjacent to Central Park Mall to the east, The Ramble and Lake to the north, West Drive to the west, and Heckscher Playground and Ballfields to the south.",
+      icon: {
+        size: new window.google.maps.Size(40, 30),
+        scaledSize: new window.google.maps.Size(40, 30),
+        url: image8
+    },
+    }); //Sheep Meadow, 1802 65th Street Transverse, New York, NY 10065
+
+    const image9 = "https://upload.wikimedia.org/wikipedia/commons/2/21/Central_Park_Wollman_Rink.jpg";
+    const beachMarker9 = new window.google.maps.Marker({
+      position: { lat: 40.76873, lng: -73.974476 },
+      map,
+      title: "Wollman Rink: Wollman Rink is a public ice rink in the southern part of Central Park, Manhattan, New York City. It is named after the Wollman family who donated the funds for its original construction. The rink is open for ice skating from late October to early April.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image9
+    },
+    }); //Wollman Rink, Central Park S, New York, NY 10019
+
+    const image10 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojINAyZbTCMaTgTNDBKyvGMPo7SjL07jBHjhdkc2bS9el1Xad7bNPxpiKNzILzrIHwSQ&usqp=CAU";
+    const beachMarker10 = new window.google.maps.Marker({
+      position: { lat: 40.769055, lng: -73.981686 },
+      map,
+      title: "Columbus Circle: Columbus Circle is a traffic circle and heavily trafficked intersection in the New York City borough of Manhattan, located at the intersection of Eighth Avenue, Broadway, Central Park South, and Central Park West, at the southwest corner of Central Park.",
+      icon: {
+        size: new window.google.maps.Size(40, 35),
+        scaledSize: new window.google.maps.Size(40, 35),
+        url: image10
+    },
+    }); //Columbus Circle, 848 Columbus Cir, New York, NY 10019
 
     //origin is set to Central Park North (110 St)
     const origin = { lat: 40.79939, lng: -73.952404 };
