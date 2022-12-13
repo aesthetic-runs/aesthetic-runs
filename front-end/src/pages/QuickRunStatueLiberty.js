@@ -133,7 +133,7 @@ const QuickRunStatueLiberty = () => {
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
       />
-      <Box sx={{ maxWidth: 400 }}>
+      <Box sx={{ maxWidth: "40vw", marginLeft: "1vw" }}>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
             <Step key={step.label}>
