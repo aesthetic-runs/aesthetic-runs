@@ -5,6 +5,7 @@ Runs that are easy on the eyes.
 ## Start development
 
 ### To run front end locally
+
 - `cd front-end`
 - `nvm use lts/hydrogen`
 - `npm install`
@@ -12,6 +13,7 @@ Runs that are easy on the eyes.
 - `npm start`
 
 ### To run back end locally
+
 - Ensure you are in the root folder
 - `nvm use lts/hydrogen`
 - `npm install`
