@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import { setAuthToken } from "../helpers/setAuthToken"
+
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -72,7 +74,9 @@ export default function Login() {
 
     axios(configuration)
       .then((result) => {
-        // result.
+        const token = result.data.token;
+        localStorage.setItem("token", token);
+        setAuthToken(token);
         alert("Success! You are now logged in.");
         navigate("/QuickRuns");
       })

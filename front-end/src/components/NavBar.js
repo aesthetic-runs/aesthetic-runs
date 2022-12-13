@@ -75,7 +75,7 @@ function NavBar(props) {
             <MenuIcon />
           </IconButton>
 
-          <Button component={Link} to="/" sx={{ color: "#fff" }}>
+          <Button component={Link} to="/Home" sx={{ color: "#fff" }}>
             Aesthetic Runs
           </Button>
 
