@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
 const QuickRunLincolnCenter = () => {
+  const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
     const directionsService = new window.google.maps.DirectionsService();
     const directionsRenderer = new window.google.maps.DirectionsRenderer();
@@ -79,8 +80,13 @@ const QuickRunLincolnCenter = () => {
 
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = (index) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (index === steps.length - 1) {
+      isLastStep.current = true;
+    } else {
+      isLastStep.current = false;
+    }
   };
 
   const handleBack = () => {
@@ -128,7 +134,7 @@ const QuickRunLincolnCenter = () => {
                   <div>
                     <Button
                       variant="contained"
-                      onClick={handleNext}
+                      onClick={(e) => handleNext(index)}
                       sx={{ mt: 1, mr: 1 }}
                     >
                       {index === steps.length - 1 ? "Finish" : "Continue"}
@@ -153,6 +159,11 @@ const QuickRunLincolnCenter = () => {
             <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
               Reset
             </Button>
+            {isLastStep.current && (
+              <Button href="/home" sx={{ mt: 1, mr: 1 }}>
+                Home
+              </Button>
+            )}
           </Paper>
         )}
       </Box>
