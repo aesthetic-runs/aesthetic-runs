@@ -12,77 +12,83 @@ import Typography from "@mui/material/Typography";
 const QuickRunStatueLiberty = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
-
     var rendererOptions = {
       map: map,
-      suppressMarkers: true
-    }
+      suppressMarkers: true,
+    };
     const directionsService = new window.google.maps.DirectionsService();
-    const directionsRenderer = new window.google.maps.DirectionsRenderer(rendererOptions);
+    const directionsRenderer = new window.google.maps.DirectionsRenderer(
+      rendererOptions
+    );
     directionsRenderer.setMap(map);
 
-    const image1 = "https://untappedcities.com/wp-content/uploads/2015/05/Washington-Square-Park-NYC-Untapped-Cities-jinwoo-chong-02.jpg";
-    const beachMarker1 = new window.google.maps.Marker({
+    const image1 =
+      "https://untappedcities.com/wp-content/uploads/2015/05/Washington-Square-Park-NYC-Untapped-Cities-jinwoo-chong-02.jpg";
+    new window.google.maps.Marker({
       position: { lat: 40.730827, lng: -73.997214 },
       map,
-      title: "Washington Square Park: Washington Square Park is a 9.75-acre public park in the Greenwich Village neighborhood of Lower Manhattan, New York City. One of the best known of New York City's public parks, it is an icon as well as a meeting place and center for cultural activity.",
+      title:
+        "Washington Square Park: Washington Square Park is a 9.75-acre public park in the Greenwich Village neighborhood of Lower Manhattan, New York City. One of the best known of New York City's public parks, it is an icon as well as a meeting place and center for cultural activity.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image1 
-    },
+        url: image1,
+      },
     }); //WSP
 
-    const image2 = "https://untappedcities.com/wp-content/uploads/2018/05/Hudson-River-Park-Pier-Manhattan-West-Side-Secrets-NYC.jpg";
-    const beachMarker2 = new window.google.maps.Marker({
+    const image2 =
+      "https://untappedcities.com/wp-content/uploads/2018/05/Hudson-River-Park-Pier-Manhattan-West-Side-Secrets-NYC.jpg";
+    new window.google.maps.Marker({
       position: { lat: 40.721321, lng: -74.013074 },
       map,
-      title: "Hudson River Park: Hudson River Park runs four miles along Manhattan’s west side attracting over 17 million visits each year. The Park provides an oasis for New Yorkers and visitors alike with a variety of recreational and educational activities.",
+      title:
+        "Hudson River Park: Hudson River Park runs four miles along Manhattan’s west side attracting over 17 million visits each year. The Park provides an oasis for New Yorkers and visitors alike with a variety of recreational and educational activities.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image2 
-    },
+        url: image2,
+      },
     }); //HudsonRiverPark
 
-    const image3 = "https://images.immediate.co.uk/production/volatile/sites/7/2021/09/GettyImages-1279734279-24aade8.jpg";
-    const beachMarker3 = new window.google.maps.Marker({
+    const image3 =
+      "https://images.immediate.co.uk/production/volatile/sites/7/2021/09/GettyImages-1279734279-24aade8.jpg";
+    new window.google.maps.Marker({
       position: { lat: 40.70124, lng: -74.015272 },
       map,
-      title: "Statue of Liberty: The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States. The copper statue, a gift from the people of France, was designed by French sculptor Frédéric Auguste Bartholdi and its metal framework was built by Gustave Eiffel.",
+      title:
+        "Statue of Liberty: The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States. The copper statue, a gift from the people of France, was designed by French sculptor Frédéric Auguste Bartholdi and its metal framework was built by Gustave Eiffel.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image3 
-    },
+        url: image3,
+      },
     }); //State of Liberty
 
     const image4 = "https://media.timeout.com/images/100326149/image.jpg";
-    const beachMarker4 = new window.google.maps.Marker({
+    new window.google.maps.Marker({
       position: { lat: 40.703118, lng: -74.015339 },
       map,
-      title: "The Battery: The Battery, formerly known as Battery Park, is a 25-acre public park located at the southern tip of Manhattan Island in New York City facing New York Harbor. It is bounded by Battery Place on the north, State Street on the east, New York Harbor to the south, and the Hudson River to the west.",
+      title:
+        "The Battery: The Battery, formerly known as Battery Park, is a 25-acre public park located at the southern tip of Manhattan Island in New York City facing New York Harbor. It is bounded by Battery Place on the north, State Street on the east, New York Harbor to the south, and the Hudson River to the west.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image4
-    },
+        url: image4,
+      },
     }); //The Battery
 
     const image5 = "http://photos.wikimapia.org/p/00/03/31/99/30_big.jpg";
-    const beachMarker5 = new window.google.maps.Marker({
+    new window.google.maps.Marker({
       position: { lat: 40.731319, lng: -73.995094 },
       map,
-      title: "Weinstein Hall: Freshman Dorm @ NYU. It has a Chick-Fil-A in the lobby.",
+      title:
+        "Weinstein Hall: Freshman Dorm @ NYU. It has a Chick-Fil-A in the lobby.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image5
-    },
+        url: image5,
+      },
     }); //Weinstein Hall
-    
-
-
 
     //origin is set to Washington Square Park, Washington Square, New York, NY 10012
     const origin = { lat: 40.730827, lng: -73.997214 };

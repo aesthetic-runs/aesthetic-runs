@@ -28,7 +28,7 @@ function NavBar(props) {
 
   const navigate = useNavigate();
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     navigate("/");
   };
 
@@ -65,7 +65,7 @@ function NavBar(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-    
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />

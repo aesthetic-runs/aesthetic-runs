@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import { setAuthToken } from "../helpers/setAuthToken"
+import { setAuthToken } from "../helpers/setAuthToken";
 
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -84,7 +84,7 @@ export default function Login() {
         let error_message = error.response.data.message;
         alert(error_message);
       });
-  }
+  };
 
   return (
     <ThemeProvider theme={theme}>

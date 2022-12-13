@@ -104,8 +104,7 @@ export default function Home() {
                     Run the route!
                   </Button>
                 </CardContent>
-                <CardActions>
-                </CardActions>
+                <CardActions></CardActions>
               </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
