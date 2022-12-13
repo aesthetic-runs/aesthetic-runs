@@ -12,52 +12,58 @@ import Typography from "@mui/material/Typography";
 const QuickRunLincolnCenter = () => {
   const isLastStep = useRef(false);
   const apiIsLoaded = (map, maps) => {
-
     var rendererOptions = {
       map: map,
-      suppressMarkers: true
-    }
+      suppressMarkers: true,
+    };
 
     const directionsService = new window.google.maps.DirectionsService();
-    const directionsRenderer = new window.google.maps.DirectionsRenderer(rendererOptions);
+    const directionsRenderer = new window.google.maps.DirectionsRenderer(
+      rendererOptions
+    );
     directionsRenderer.setMap(map);
 
-    const image1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojINAyZbTCMaTgTNDBKyvGMPo7SjL07jBHjhdkc2bS9el1Xad7bNPxpiKNzILzrIHwSQ&usqp=CAU";
-    const beachMarker1 = new window.google.maps.Marker({
+    const image1 =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojINAyZbTCMaTgTNDBKyvGMPo7SjL07jBHjhdkc2bS9el1Xad7bNPxpiKNzILzrIHwSQ&usqp=CAU";
+    new window.google.maps.Marker({
       position: { lat: 40.768411, lng: -73.981885 },
       map,
-      title: "Columbus Circle: Columbus Circle is a traffic circle and heavily trafficked intersection in the New York City borough of Manhattan, located at the intersection of Eighth Avenue, Broadway, Central Park South, and Central Park West, at the southwest corner of Central Park.",
+      title:
+        "Columbus Circle: Columbus Circle is a traffic circle and heavily trafficked intersection in the New York City borough of Manhattan, located at the intersection of Eighth Avenue, Broadway, Central Park South, and Central Park West, at the southwest corner of Central Park.",
       icon: {
         size: new window.google.maps.Size(40, 35),
         scaledSize: new window.google.maps.Size(40, 35),
-        url: image1
-    },
+        url: image1,
+      },
     }); //Columbus Circle
 
-    const image2 = "https://www.nycgo.com/images/venues/1080/lincolncenter_joebuglewicz_075__large.jpg";
-    const beachMarker2 = new window.google.maps.Marker({
+    const image2 =
+      "https://www.nycgo.com/images/venues/1080/lincolncenter_joebuglewicz_075__large.jpg";
+    new window.google.maps.Marker({
       position: { lat: 40.772692, lng: -73.983425 },
       map,
-      title: "Lincoln Center: Lincoln Center for the Performing Arts (also simply known as Lincoln Center) is a 16.3-acre (6.6-hectare) complex of buildings in the Lincoln Square neighborhood on the Upper West Side of Manhattan. It has thirty indoor and outdoor facilities and is host to 5 million visitors annually. It houses internationally renowned performing arts organizations including the New York Philharmonic, the Metropolitan Opera, the New York City Ballet, and the Juilliard School.",
+      title:
+        "Lincoln Center: Lincoln Center for the Performing Arts (also simply known as Lincoln Center) is a 16.3-acre (6.6-hectare) complex of buildings in the Lincoln Square neighborhood on the Upper West Side of Manhattan. It has thirty indoor and outdoor facilities and is host to 5 million visitors annually. It houses internationally renowned performing arts organizations including the New York Philharmonic, the Metropolitan Opera, the New York City Ballet, and the Juilliard School.",
       icon: {
         size: new window.google.maps.Size(40, 30),
         scaledSize: new window.google.maps.Size(40, 30),
-        url: image2
-    },
+        url: image2,
+      },
     }); //Lincoln Center Performing Arts
 
-    const image3 = "https://cdn.shopify.com/s/files/1/1993/6065/files/pasted-image-0-5.png";
-    const beachMarker3 = new window.google.maps.Marker({
+    const image3 =
+      "https://cdn.shopify.com/s/files/1/1993/6065/files/pasted-image-0-5.png";
+    new window.google.maps.Marker({
       position: { lat: 40.775967, lng: -73.97474 },
       map,
-      title: "Strawberry Fields: Strawberry Fields is a 2.5-acre landscaped section in New York City's Central Park, designed by the landscape architect Bruce Kelly, that is dedicated to the memory of former Beatles member John Lennon. It is named after the Beatles' song 'Strawberry Fields Forever', written by Lennon.",
+      title:
+        "Strawberry Fields: Strawberry Fields is a 2.5-acre landscaped section in New York City's Central Park, designed by the landscape architect Bruce Kelly, that is dedicated to the memory of former Beatles member John Lennon. It is named after the Beatles' song 'Strawberry Fields Forever', written by Lennon.",
       icon: {
         size: new window.google.maps.Size(40, 35),
         scaledSize: new window.google.maps.Size(40, 35),
-        url: image3
-    },
+        url: image3,
+      },
     }); //Strawberry Fields NY 10023
-
 
     //origin is set to Columbus Circle, 848 Columbus Cir, New York, NY 10019
     const origin = { lat: 40.768411, lng: -73.981885 };

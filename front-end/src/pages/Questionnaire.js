@@ -102,8 +102,7 @@ const Questionnaire = () => {
       setCurrentQuestion(0);
     } else if (currentQuestion === 1) {
       window.location.reload(false);
-    }
-    else {
+    } else {
       setCurrentQuestion(currentQuestion - 1);
       setAnswers(answers.slice(0, -1));
     }
