@@ -84,15 +84,6 @@ export default function Home() {
               spacing={2}
               justifyContent="center"
             >
-              {/* <Button variant="contained">Sign up!</Button> */}
-              <Button
-                component={RouterLink}
-                to="/Registration"
-                variant="contained"
-              >
-                Sign up!
-              </Button>
-              {/* <Button variant="outlined">Secondary action</Button> */}
               <Button
                 component={RouterLink}
                 to="/Questionaire"
@@ -132,7 +123,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://i.imgur.com/wHgMbjc.jpg"
+                  image="https://i.imgur.com/UuBLN4A.png"
                   alt="Hudson River"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -186,7 +177,7 @@ export default function Home() {
               >
                 <CardMedia
                   component="img"
-                  image="https://i.imgur.com/wHgMbjc.jpg"
+                  image="https://i.imgur.com/8xk3z1v.png"
                   alt="Central Park"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>

@@ -48,11 +48,6 @@ function NavBar(props) {
             <ListItemText>QuickRuns</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/Login">
-            <ListItemText>Login</ListItemText>
-          </ListItemButton>
-        </ListItem>
       </List>
     </Box>
   );
@@ -75,7 +70,7 @@ function NavBar(props) {
             <MenuIcon />
           </IconButton>
 
-          <Button component={Link} to="/" sx={{ color: "#fff" }}>
+          <Button component={Link} to="/Home" sx={{ color: "#fff" }}>
             Aesthetic Runs
           </Button>
 
@@ -92,14 +87,8 @@ function NavBar(props) {
             <Button component={Link} to="/Map" sx={{ color: "#fff" }}>
               Map
             </Button>
-            {/* <Button component={Link} to="/Profile" sx={{ color: "#fff" }}>
-              Profile
-            </Button> */}
             <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
               QuickRuns
-            </Button>
-            <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
-              Login
             </Button>
           </Box>
         </Toolbar>
