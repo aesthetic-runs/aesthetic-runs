@@ -48,11 +48,6 @@ function NavBar(props) {
             <ListItemText>QuickRuns</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/Login">
-            <ListItemText>Login</ListItemText>
-          </ListItemButton>
-        </ListItem>
       </List>
     </Box>
   );
@@ -94,9 +89,6 @@ function NavBar(props) {
             </Button>
             <Button component={Link} to="/QuickRuns" sx={{ color: "#fff" }}>
               QuickRuns
-            </Button>
-            <Button component={Link} to="/Login" sx={{ color: "#fff" }}>
-              Login
             </Button>
           </Box>
         </Toolbar>
