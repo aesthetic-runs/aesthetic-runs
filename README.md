@@ -4,16 +4,18 @@ Runs that are easy on the eyes.
 
 ## Start development
 
-### To run front end locally
+### Run front end on local machine
+
 - `cd front-end`
 - `nvm use lts/hydrogen`
 - `npm install`
-- Add API key to using `dotenv` to `front-end/src/components/MapDisplay`
+- Add Google Maps API key using `dotenv` to `front-end/src/components/MapDisplay`
 - `npm start`
 
-### To run back end locally
+### Run back end on local machine
+
 - Ensure you are in the root folder
 - `nvm use lts/hydrogen`
 - `npm install`
-- Add MongoDB access key to using `dotenv` to `/db/dbConnect.js`
+- Add MongoDB access key using `dotenv` to `/db/dbConnect.js`
 - `npx nodemon index.js`

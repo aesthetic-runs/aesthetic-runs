@@ -12,12 +12,12 @@ function Landing() {
         width: "100vw",
         height: "100vh",
         backgroundImage: `url("https://wallpaperaccess.com/full/123346.jpg")`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <Stack
-        sx={{ pt: 20 }}
+        sx={{ pt: "35vh" }}
         direction="row"
         spacing={2}
         justifyContent="center"
