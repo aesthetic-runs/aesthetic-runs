@@ -23,8 +23,7 @@ const PopularRunMidtownEastArchitecture = () => {
     );
     directionsRenderer.setMap(map);
 
-    const image1 =
-      "https://i.imgur.com/tRYdMxp.png";
+    const image1 = "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.753294, lng: -73.977161 },
       map,

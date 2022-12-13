@@ -23,8 +23,7 @@ const PopularRunHudsonRiver = () => {
     );
     directionsRenderer.setMap(map);
 
-    const image1 =
-      "https://i.imgur.com/tRYdMxp.png";
+    const image1 = "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.754459, lng: -74.002129 },
       map,
