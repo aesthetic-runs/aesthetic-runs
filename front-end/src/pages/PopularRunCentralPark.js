@@ -23,8 +23,7 @@ const PopularRunCentralPark = () => {
     );
     directionsRenderer.setMap(map);
 
-    const image1 =
-      "https://i.imgur.com/tRYdMxp.png";
+    const image1 = "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.79939, lng: -73.952404 },
       map,

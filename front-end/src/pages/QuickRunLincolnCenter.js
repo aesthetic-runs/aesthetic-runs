@@ -23,8 +23,7 @@ const QuickRunLincolnCenter = () => {
     );
     directionsRenderer.setMap(map);
 
-    const image1 =
-      "https://i.imgur.com/tRYdMxp.png";
+    const image1 = "https://i.imgur.com/tRYdMxp.png";
     new window.google.maps.Marker({
       position: { lat: 40.768411, lng: -73.981885 },
       map,
