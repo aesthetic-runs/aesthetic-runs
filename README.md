@@ -2,6 +2,12 @@
 
 Runs that are easy on the eyes.
 
+Link to website:
+
+aesthetic-runs.netlify.app/
+
+*Please allow some time when signing up or loging in
+
 ## Start development
 
 ### Run front end on local machine
