@@ -165,13 +165,13 @@ export const auth = {
     }
   },
 
-  onAuthStateChange: (callback: (session: { user?: { id?: string; email?: string } } | null) => void) => {
+  onAuthStateChange: (callback: (event: string, session: { user?: { id?: string; email?: string } } | null) => void) => {
     try {
       const {
         data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
+      } = supabase.auth.onAuthStateChange((event, session) => {
         console.log('Auth state changed:', { event, hasSession: !!session });
-        callback(session);
+        callback(event, session);
       });
 
       return subscription;

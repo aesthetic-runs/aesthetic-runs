@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import { supabase } from '@/lib/supabase';
 
 interface AuthState {
@@ -8,6 +8,7 @@ interface AuthState {
   isAuthenticated: boolean;
   setAuth: (user: { id: string; email: string } | null, session: { user?: { id?: string; email?: string }; access_token?: string } | null) => void;
   logout: () => void;
+  _hasHydrated: boolean;
 }
 
 export const useAuthStore = create<AuthState>()(
@@ -16,6 +17,7 @@ export const useAuthStore = create<AuthState>()(
       user: null,
       session: null,
       isAuthenticated: false,
+      _hasHydrated: false,
       setAuth: (user, session) => {
         if (session?.access_token) {
           localStorage.setItem('token', session.access_token);
@@ -32,6 +34,10 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: 'auth-storage',
+      storage: createJSONStorage(() => localStorage),
+      onRehydrateStorage: () => (state) => {
+        state && (state._hasHydrated = true);
+      },
     },
   ),
 );

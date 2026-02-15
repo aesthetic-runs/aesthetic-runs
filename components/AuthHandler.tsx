@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/authStore';
 import { auth } from '@/lib/auth';
+import { supabase } from '@/lib/supabase';
 import EmailVerifiedModal from './EmailVerifiedModal';
 
 export default function AuthHandler() {
@@ -12,12 +13,29 @@ export default function AuthHandler() {
   const [showVerifiedModal, setShowVerifiedModal] = useState(false);
 
   useEffect(() => {
-    const subscription = auth.onAuthStateChange(async (session) => {
-      console.log('Auth state changed:', session);
-
-      if (session) {
+    // Check current session immediately on mount
+    const checkInitialSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      console.log('Initial session check:', session);
+      
+      if (session?.user) {
         setAuth(
-          { id: session.user?.id || '', email: session.user?.email || '' },
+          { id: session.user.id || '', email: session.user.email || '' },
+          session,
+        );
+      }
+    };
+    
+    checkInitialSession();
+
+    const subscription = auth.onAuthStateChange((event, session) => {
+      console.log('Auth state changed:', { event, session });
+
+      if (event === 'SIGNED_IN') {
+        if (!session?.user) return;
+        
+        setAuth(
+          { id: session.user.id || '', email: session.user.email || '' },
           session,
         );
 
@@ -27,7 +45,7 @@ export default function AuthHandler() {
           setShowVerifiedModal(true);
           window.history.replaceState({}, document.title, window.location.pathname);
         }
-      } else {
+      } else if (event === 'SIGNED_OUT') {
         setAuth(null, null);
       }
     });
